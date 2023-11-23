@@ -1,4 +1,4 @@
-package com.example.turbotyperacer;
+package com.gui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,13 +10,13 @@ import javafx.scene.Scene;
 import java.io.IOException;
 import java.util.Objects;
 
-public class HelloApplication extends Application {
+public class StartScreen extends Application {
     @Override
     public void start(Stage stage) {
         Parent root;
 
         try {
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("hello-view.fxml")));
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("StartScreen-view.fxml")));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

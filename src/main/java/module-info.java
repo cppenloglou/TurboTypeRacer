@@ -1,4 +1,4 @@
-module com.example.turbotyperacer {
+module com.gui {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -10,6 +10,6 @@ module com.example.turbotyperacer {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
 
-    opens com.example.turbotyperacer to javafx.fxml;
-    exports com.example.turbotyperacer;
+    opens com.gui to javafx.fxml;
+    exports com.gui;
 }

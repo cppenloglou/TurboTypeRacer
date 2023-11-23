@@ -12,3 +12,12 @@
     -fx-alignment: center ;
     -fx-padding: 10 ;
 }
+
+.textField {
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+    -fx-background-position: center;
+    -fx-background-image: url("../assets/startScreen/backgroundBtn.png");
+    -fx-alignment: center ;
+    -fx-text-fill: black;
+}

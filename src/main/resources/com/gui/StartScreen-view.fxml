@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="containerBackground" stylesheets="@../../styles/styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.StartScreenController">
+   <top>
+      <ImageView fitHeight="200.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../../assets/startScreen/label.png" />
+         </image>
+         <BorderPane.margin>
+            <Insets top="100.0" />
+         </BorderPane.margin>
+      </ImageView>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="container" stylesheets="@../../styles/styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="290.0" prefWidth="1260.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="20.0" prefWidth="20.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fx:id="loginButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#mouseClicked" pickOnBounds="true" preserveRatio="true" styleClass="child" GridPane.halignment="RIGHT">
+                     <image>
+                        <Image url="@../../assets/startScreen/loginBtn.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" styleClass="child" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@../../assets/startScreen/statsBtn.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </ImageView>
+                  <ImageView fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" styleClass="child" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@../../assets/startScreen/settingsBtn.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="signUpButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#mouseClicked" pickOnBounds="true" preserveRatio="true" styleClass="child" GridPane.columnIndex="2">
+                     <image>
+                        <Image url="@../../assets/startScreen/signUpBtn.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <ImageView fx:id="quitButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#mouseClicked" pickOnBounds="true" preserveRatio="true" styleClass="child">
+               <image>
+                  <Image url="@../../assets/startScreen/quitBtn.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="child" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

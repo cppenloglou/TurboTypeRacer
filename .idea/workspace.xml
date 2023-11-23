@@ -4,27 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4349fe6-15ab-47f3-8c96-c940a2b89be7" name="Changes" comment="Initial Libs Setup">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/label.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/loginBtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/mainBackgroundTheme.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/quitBtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/settingsBtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/statsBtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/styles/styles.css" afterDir="false" />
+    <list default="true" id="e4349fe6-15ab-47f3-8c96-c940a2b89be7" name="Changes" comment="Added login and signup screen">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/LoginManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gui/LoginScreenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gui/SignUpScreenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gui/StartScreenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/profile/profileIconBlue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/profile/profileIconGreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/profile/profileIconPurple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/profile/profileIconRed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/backgroundBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/chooseImageBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/editProfileBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/goBackBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/signUpBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LoginScreen-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gui/SignUpScreen-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gui/StartScreen-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/playerDb/players.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/turbotyperacer/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/turbotyperacer/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/turbotyperacer/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/turbotyperacer/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/turbotyperacer/turbotyperacer/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/turbotyperacer/turbotyperacer/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/turbotyperacer/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/turbotyperacer/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/turbotyperacer/turbotyperacer/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/turbotyperacer/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/StartScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/turbotyperacer/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/turbotyperacer/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,7 +56,6 @@
   <component name="ProjectId" id="2YUpMGDf7sxUNVVrAGzQDYRHC0U" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
@@ -46,21 +63,28 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/xriso/Downloads/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib/javafx.swing.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/giorgos_spinkl/IdeaProjects/TurboTypeRacer/src/main/resources/com/gui&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\com\gui" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\com\gui" />
       <recent name="C:\Users\xriso\IdeaProjects\TurboTypeRacer\src\main\resources\assets\startScreen" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.gui" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.HelloApplication">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.turbotyperacer.HelloApplication" />
+  <component name="RunManager">
+    <configuration name="StartScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.gui.StartScreen" />
       <module name="TurboTypeRacer" />
       <extension name="coverage">
         <pattern>
@@ -72,12 +96,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.example.turbotyperacer.HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.turbotyperacer.HelloApplication" />
+    <configuration name="StartScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.gui.StartScreen" />
       <module name="TurboTypeRacer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.turbotyperacer.*" />
+          <option name="PATTERN" value="com.gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -87,8 +111,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HelloApplication" />
-        <item itemvalue="Application.com.example.turbotyperacer.HelloApplication" />
+        <item itemvalue="Application.StartScreen" />
+        <item itemvalue="Application.StartScreen" />
       </list>
     </recent_temporary>
   </component>
@@ -121,7 +145,11 @@
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
     <MESSAGE value="Initial Libs Setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Libs Setup" />
+    <MESSAGE value="Added login and signup screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added login and signup screen" />
   </component>
 </project>
