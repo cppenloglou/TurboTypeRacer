@@ -1,21 +1,29 @@
 package com.game;
 
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.List;
 
 public class Player implements Serializable {
     private String name;
     private String password;
     private String phoneNumber;
     private String profileImage;
+    private HashMap<Integer, Integer> scoreMap = new HashMap<>();
 
     public Player(String name, String password, String phoneNumber, String profileImage){
         this.name = name;
         this.password = password;
         this.phoneNumber = phoneNumber;
         this.profileImage = profileImage;
+        IntializeScoreMap();
+    }
+
+    public void IntializeScoreMap() {
+        for(int i = 0; i < 3; i++) {
+            scoreMap.put(i, 0);
+        }
     }
 
     public void setName(String name) {
@@ -40,5 +48,17 @@ public class Player implements Serializable {
 
     public String getPassword() {
         return this.password;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getProfileImage() {
+        return profileImage;
+    }
+
+    public HashMap<Integer, Integer> getScoreMap() {
+        return scoreMap;
     }
 }

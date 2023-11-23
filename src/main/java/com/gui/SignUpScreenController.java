@@ -100,8 +100,12 @@ public class SignUpScreenController {
         if(name!=null && password!=null && phoneNumber!=null && profileImage!=null){
             LoginManager loginManager = new LoginManager("players.txt");
             if(!loginManager.playerExists(name)){
-                loginManager.addUser(new Player(name, password, phoneNumber, profileImage));
+
+                Player tempPlayer = new Player(name, password, phoneNumber, profileImage);
+                loginManager.addUser(tempPlayer);
+
                 loginManager.savePlayerDatabase("players.txt");
+                loginManager.setCurrentPlayer(tempPlayer);
 
                 root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("MainScreen-view.fxml")));
                 stage = (Stage) ((Node)event.getSource()).getScene().getWindow();

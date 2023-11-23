@@ -4,6 +4,8 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class LoginManager {
+
+    private static Player currentPlayer;
     private static ArrayList<Player> playerDatabase = new ArrayList<>();
 
     public LoginManager(String fileName){
@@ -51,5 +53,32 @@ public class LoginManager {
 
     public void addUser(Player p) {
         playerDatabase.add(p);
+    }
+
+    public void addCurrentPlayer(Player p) {
+        currentPlayer = p;
+    }
+
+    public Player getPlayer(String username, String password) {
+
+        if(playerDatabase==null){
+            return null;
+        }
+
+        for (Player p : playerDatabase) {
+            if(p.getName().equals(username) && p.getPassword().equals(password)){
+                return p;
+            }
+        }
+
+        return null;
+    }
+
+    public void setCurrentPlayer(Player tempPlayer) {
+        currentPlayer = tempPlayer;
+    }
+
+    public static Player getCurrentPlayer() {
+        return currentPlayer;
     }
 }

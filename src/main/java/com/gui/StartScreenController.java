@@ -16,10 +16,19 @@ public class StartScreenController {
     private Stage stage;
     private Parent root;
     @FXML
-    private ImageView loginButton, signUpButton, quitButton;
+    private ImageView loginButton, signUpButton, quitButton,  leaderboardBtn;
 
     @FXML
     void initialize() {
+        assert leaderboardBtn != null : "fx:id=\"leaderboardBtn\" was not injected: check your FXML file 'StartScreen-view.fxml'.";
+        assert loginButton != null : "fx:id=\"loginButton\" was not injected: check your FXML file 'StartScreen-view.fxml'.";
+        assert quitButton != null : "fx:id=\"quitButton\" was not injected: check your FXML file 'StartScreen-view.fxml'.";
+        assert signUpButton != null : "fx:id=\"signUpButton\" was not injected: check your FXML file 'StartScreen-view.fxml'.";
+
+    }
+
+    @FXML
+    void leaderboardClicked(MouseEvent event) throws IOException {
 
     }
 

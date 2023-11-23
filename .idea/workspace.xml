@@ -5,31 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4349fe6-15ab-47f3-8c96-c940a2b89be7" name="Changes" comment="Added login and signup screen">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/LoginManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gui/LoginScreenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gui/SignUpScreenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gui/StartScreenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/profile/profileIconBlue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/profile/profileIconGreen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/profile/profileIconPurple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/profile/profileIconRed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/backgroundBtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/chooseImageBtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/editProfileBtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/goBackBtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/signUpBtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LoginScreen-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gui/SignUpScreen-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gui/StartScreen-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/playerDb/players.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/players.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gui/EditProfileScreenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gui/MainScreenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gui/ProfileScreenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/leaderBoardBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/levelsBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/listBackground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/startScreen/updateBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gui/EditProfileScreen-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gui/MainScreen-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gui/ProfileScreen-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/turbotyperacer/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/StartScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/turbotyperacer/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/turbotyperacer/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/LoginManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/LoginManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LoginScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LoginScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/SignUpScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/SignUpScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/StartScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/StartScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/StartScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/StartScreen-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +39,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
@@ -54,22 +53,25 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2YUpMGDf7sxUNVVrAGzQDYRHC0U" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/giorgos_spinkl/IdeaProjects/TurboTypeRacer/src/main/resources/com/gui&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "G:/giorgos_spinkl/IdeaProjects/TurboTypeRacer/src/main/resources/com/gui",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\com\gui" />
@@ -144,7 +146,31 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
