@@ -1,5 +1,6 @@
 package com.gui;
 
+import com.game.LoginManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -28,6 +29,8 @@ public class StartScreen extends Application {
         stage.setResizable(true);
         stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
         stage.show();
+
+        LoginManager.initializeLoginManager("players.txt");
     }
 
     public static void main(String[] args) {

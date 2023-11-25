@@ -1,19 +1,16 @@
 package com.gui;
 
 import java.io.IOException;
-import java.util.Objects;
 
+import com.game.Level;
 import com.game.LoginManager;
 import com.game.Player;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCombination;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -34,32 +31,20 @@ public class ProfileScreenController {
 
     @FXML
     void returnToMain(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("MainScreen-view.fxml")));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        configureStage(stage, "Main");
+        StartScreenController.sceneGenerator(stage, root, "MainScreen-view.fxml", event, "Main Screen");
+
     }
 
     @FXML
     void updateClicked(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("EditProfileScreen-view.fxml")));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        configureStage(stage, "EditProfileScreen");
-    }
-
-    private void configureStage(Stage stage, String stageTitle) {
-        stage.getScene().setRoot(root);
-        stage.setFullScreen(false);
-        stage.setResizable(true);
-        stage.setTitle(stageTitle + " " + "Screen");
-        stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
-        stage.show();
+        StartScreenController.sceneGenerator(stage, root, "EditProfileScreen-view.fxml", event, "Edit Profile Screen");
     }
 
     private void initializeStatsList() {
         Player currentPlayer = LoginManager.getCurrentPlayer();
         statsList.getItems().clear();
-        for(Integer i : currentPlayer.getScoreMap().keySet()) {
-            statsList.getItems().add("Level " + i + ": " + currentPlayer.getScoreMap().get(i));
+        for(Level level : currentPlayer.getScoreMap().keySet()) {
+            statsList.getItems().add("Level " + level.getLevelNum() + ": Total wins: " + currentPlayer.getScoreMap().get(level));
         }
     }
 

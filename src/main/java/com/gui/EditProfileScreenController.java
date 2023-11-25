@@ -3,20 +3,15 @@ package com.gui;
 import com.game.LoginManager;
 import com.game.Player;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCombination;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class EditProfileScreenController {
     private final ArrayList<ImageView> iconList = new ArrayList<>();
@@ -27,10 +22,7 @@ public class EditProfileScreenController {
     private PasswordField passwordField;
 
     @FXML
-    private ImageView greenIcon, redIcon, blueIcon, purpleIcon;
-
-    @FXML
-    private ImageView goBackButton;
+    private ImageView greenIcon, redIcon, blueIcon, purpleIcon, goBackButton;
 
     private String profileImage;
 
@@ -80,18 +72,11 @@ public class EditProfileScreenController {
 
     @FXML
     void returnToMain(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("StartScreen-view.fxml")));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        configureStage(stage, "Start");
-    }
-
-    private void configureStage(Stage stage, String stageTitle) {
-        stage.getScene().setRoot(root);
-        stage.setFullScreen(false);
-        stage.setResizable(true);
-        stage.setTitle(stageTitle + " " + "Screen");
-        stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
-        stage.show();
+        if(LoginManager.getCurrentPlayer()!=null)
+            StartScreenController.sceneGenerator(stage, root, "MainScreen-view.fxml", event, "Main Screen");
+        else{
+            StartScreenController.sceneGenerator(stage, root, "StartScreen-view.fxml", event, "Start Screen");
+        }
     }
 
     @FXML
@@ -101,19 +86,16 @@ public class EditProfileScreenController {
         String phoneNumber = phoneNumberField.getText();
 
         if(name!=null && password!=null && phoneNumber!=null && profileImage!=null){
-            LoginManager loginManager = new LoginManager("players.txt");
-            if(!loginManager.playerExists(name)){
-                Player updatedPlayer = loginManager.getPlayer(LoginManager.getCurrentPlayer().getName(), LoginManager.getCurrentPlayer().getPassword());
+            if(!LoginManager.playerExists(name) || name.equals(LoginManager.getCurrentPlayer().getName())){
+                Player updatedPlayer = LoginManager.getPlayer(LoginManager.getCurrentPlayer().getName(), LoginManager.getCurrentPlayer().getPassword());
                 updatedPlayer.setName(name);
                 updatedPlayer.setPassword(password);
                 updatedPlayer.setPhoneNumber(phoneNumber);
                 updatedPlayer.setImage(profileImage);
-                loginManager.savePlayerDatabase("players.txt");
-                loginManager.setCurrentPlayer(updatedPlayer);
+                LoginManager.savePlayerDatabase("players.txt");
+                LoginManager.setCurrentPlayer(updatedPlayer);
 
-                root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("MainScreen-view.fxml")));
-                stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-                configureStage(stage, "Main");
+                StartScreenController.sceneGenerator(stage, root, "MainScreen-view.fxml", event, "Main Screen");
             }
         }
     }

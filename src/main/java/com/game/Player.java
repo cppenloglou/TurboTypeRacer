@@ -2,27 +2,27 @@ package com.game;
 
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class Player implements Serializable {
     private String name;
     private String password;
     private String phoneNumber;
     private String profileImage;
-    private HashMap<Integer, Integer> scoreMap = new HashMap<>();
+    private HashMap<Level, Integer> scoreMap = new HashMap<>();
 
-    public Player(String name, String password, String phoneNumber, String profileImage){
+    public Player(String name, String password, String phoneNumber, String profileImage, ArrayList<Level> levels){
         this.name = name;
         this.password = password;
         this.phoneNumber = phoneNumber;
         this.profileImage = profileImage;
-        IntializeScoreMap();
+        InitializeScoreMap(levels);
     }
 
-    public void IntializeScoreMap() {
-        for(int i = 0; i < 3; i++) {
-            scoreMap.put(i, 0);
+    public void InitializeScoreMap(ArrayList<Level> levels) {
+        for(Level level : levels) {
+            this.scoreMap.put(level, 0);
         }
     }
 
@@ -51,14 +51,22 @@ public class Player implements Serializable {
     }
 
     public String getPhoneNumber() {
-        return phoneNumber;
+        return this.phoneNumber;
     }
 
     public String getProfileImage() {
-        return profileImage;
+        return this.profileImage;
     }
 
-    public HashMap<Integer, Integer> getScoreMap() {
-        return scoreMap;
+    public int getScore(Level level){
+        return this.scoreMap.get(level);
+    }
+
+    public void setLevelAndScore(Level level, int score){
+        this.scoreMap.put(level, score);
+    }
+
+    public HashMap<Level, Integer> getScoreMap() {
+        return this.scoreMap;
     }
 }

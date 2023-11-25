@@ -1,5 +1,7 @@
 package com.gui;
 
+import com.game.LevelManager;
+import com.game.LoginManager;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -25,25 +27,25 @@ public class StartScreenController {
         assert quitButton != null : "fx:id=\"quitButton\" was not injected: check your FXML file 'StartScreen-view.fxml'.";
         assert signUpButton != null : "fx:id=\"signUpButton\" was not injected: check your FXML file 'StartScreen-view.fxml'.";
 
-    }
-
-    @FXML
-    void leaderboardClicked(MouseEvent event) throws IOException {
-
+        LevelManager.initializeLevels();
     }
 
     @FXML
     void mouseClicked(MouseEvent event) throws IOException {
         if (event.getSource() == loginButton)
-            sceneGenerator("LoginScreen-view.fxml", event, "Login Screen");
+            sceneGenerator(stage, root, "LoginScreen-view.fxml", event, "Login Screen");
         else if (event.getSource() == signUpButton)
-            sceneGenerator("SignUpScreen-view.fxml", event, "SignUp Screen");
-        else if (event.getSource() == quitButton)
+            sceneGenerator(stage, root,"SignUpScreen-view.fxml", event, "SignUp Screen");
+        else if (event.getSource() == leaderboardBtn)
+            sceneGenerator(stage,root,"LeaderBoardScreen-view.fxml", event, "LeaderBoard Screen");
+        else if (event.getSource() == quitButton){
+            LoginManager.savePlayerDatabase("players.txt");
             System.exit(0);
+        }
     }
 
-    private void sceneGenerator(String name, MouseEvent event, String Player_Screen) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(name)));
+    public static void sceneGenerator(Stage stage, Parent root, String name, MouseEvent event, String Player_Screen) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(StartScreenController.class.getResource(name)));
 
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.getScene().setRoot(root);

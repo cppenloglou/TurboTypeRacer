@@ -17,7 +17,7 @@
    <top>
       <ImageView fitHeight="200.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
          <image>
-            <Image url="@../../assets/startScreen/label.png" />
+            <Image url="@../../assets/scene Elements/label.png" />
          </image>
          <BorderPane.margin>
             <Insets top="100.0" />
@@ -58,12 +58,12 @@
                   </PasswordField>
                   <ImageView fx:id="loginButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#loginClicked" pickOnBounds="true" preserveRatio="true" styleClass="child" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <image>
-                        <Image url="@../../assets/startScreen/loginBtn.png" />
+                        <Image url="@../../assets/buttons/loginBtn.png" />
                      </image>
                   </ImageView>
                   <ImageView fx:id="editProfileButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#editProfile" pickOnBounds="true" preserveRatio="true" styleClass="child" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <image>
-                        <Image url="@../../assets/startScreen/editProfileBtn.png" />
+                        <Image url="@../../assets/buttons/editProfileBtn.png" />
                      </image>
                   </ImageView>
                </children>
@@ -74,7 +74,7 @@
             <HBox prefHeight="100.0" prefWidth="1214.0" />
             <ImageView fx:id="goBackButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#returnToMain" pickOnBounds="true" preserveRatio="true" styleClass="child">
                <image>
-                  <Image url="@../../assets/startScreen/goBackBtn.png" />
+                  <Image url="@../../assets/buttons/goBackBtn.png" />
                </image>
             </ImageView>
          </children>

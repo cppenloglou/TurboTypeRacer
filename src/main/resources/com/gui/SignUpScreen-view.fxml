@@ -14,7 +14,7 @@
    <top>
       <ImageView fitHeight="200.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
          <image>
-            <Image url="@../../assets/startScreen/label.png" />
+            <Image url="@../../assets/scene Elements/label.png" />
          </image>
          <BorderPane.margin>
             <Insets top="100.0" />
@@ -100,12 +100,12 @@
                </children></HBox>
             <ImageView fx:id="loginButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#signUpClicked" pickOnBounds="true" preserveRatio="true" styleClass="child">
                <image>
-                  <Image url="@../../assets/startScreen/signUpBtn.png" />
+                  <Image url="@../../assets/buttons/signUpBtn.png" />
                </image>
             </ImageView>
             <ImageView fx:id="goBackButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#returnToMain" pickOnBounds="true" preserveRatio="true" styleClass="child">
                <image>
-                  <Image url="@../../assets/startScreen/goBackBtn.png" />
+                  <Image url="@../../assets/buttons/goBackBtn.png" />
                </image>
             </ImageView>
          </children>

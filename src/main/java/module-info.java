@@ -12,4 +12,8 @@ module com.gui {
 
     opens com.gui to javafx.fxml;
     exports com.gui;
+
+    opens com.game to javafx.fxml;
+    exports com.game;
+
 }

@@ -3,18 +3,14 @@ package com.gui;
 
 import com.game.LoginManager;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCombination;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Objects;
 
 public class LoginScreenController {
     @FXML
@@ -28,18 +24,7 @@ public class LoginScreenController {
 
     @FXML
     public void returnToMain(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("StartScreen-view.fxml")));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        configureStage(stage, "Start");
-    }
-
-    private void configureStage(Stage stage, String stageTitle) {
-        stage.getScene().setRoot(root);
-        stage.setFullScreen(false);
-        stage.setResizable(true);
-        stage.setTitle(stageTitle + " " + "Screen");
-        stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
-        stage.show();
+        StartScreenController.sceneGenerator(stage, root, "StartScreen-view.fxml", event, "Start Screen");
     }
 
     @FXML
@@ -55,13 +40,9 @@ public class LoginScreenController {
         String password = passwordField.getText();
 
         if(name!=null && password !=null){
-            LoginManager loginManager = new LoginManager("players.txt");
-
-            if(loginManager.isValidLogin(name,password)){
-                loginManager.addCurrentPlayer(loginManager.getPlayer(name,password));
-                root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("EditProfileScreen-view.fxml")));
-                stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-                configureStage(stage, "EditProfile");
+            if(LoginManager.isValidLogin(name,password)){
+                LoginManager.addCurrentPlayer(LoginManager.getPlayer(name,password));
+                StartScreenController.sceneGenerator(stage, root, "EditProfileScreen-view.fxml", event, "Edit Profile Screen");
             }
         }
     }
@@ -71,13 +52,9 @@ public class LoginScreenController {
         String password = passwordField.getText();
 
         if(name!=null && password !=null){
-            LoginManager loginManager = new LoginManager("players.txt");
-
-            if(loginManager.isValidLogin(name,password)){
-                loginManager.addCurrentPlayer(loginManager.getPlayer(name,password));
-                root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("MainScreen-view.fxml")));
-                stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-                configureStage(stage, "MainScreen");
+            if(LoginManager.isValidLogin(name,password)){
+                LoginManager.addCurrentPlayer(LoginManager.getPlayer(name,password));
+                StartScreenController.sceneGenerator(stage, root, "MainScreen-view.fxml", event, "Main Screen");
             }
         }
     }

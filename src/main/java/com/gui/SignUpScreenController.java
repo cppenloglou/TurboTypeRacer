@@ -1,21 +1,19 @@
 package com.gui;
 
+import com.game.Level;
+import com.game.LevelManager;
 import com.game.LoginManager;
 import com.game.Player;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCombination;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class SignUpScreenController {
     @FXML
@@ -33,18 +31,7 @@ public class SignUpScreenController {
 
     @FXML
     void returnToMain(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("StartScreen-view.fxml")));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        configureStage(stage, "Start");
-    }
-
-    private void configureStage(Stage stage, String stageTitle) {
-        stage.getScene().setRoot(root);
-        stage.setFullScreen(false);
-        stage.setResizable(true);
-        stage.setTitle(stageTitle + " " + "Screen");
-        stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
-        stage.show();
+        StartScreenController.sceneGenerator(stage, root, "StartScreen-view.fxml", event, "Start Screen");
     }
 
     @FXML
@@ -98,18 +85,18 @@ public class SignUpScreenController {
         String phoneNumber = phoneNumberField.getText();
 
         if(name!=null && password!=null && phoneNumber!=null && profileImage!=null){
-            LoginManager loginManager = new LoginManager("players.txt");
-            if(!loginManager.playerExists(name)){
+            if(!LoginManager.playerExists(name)){
 
-                Player tempPlayer = new Player(name, password, phoneNumber, profileImage);
-                loginManager.addUser(tempPlayer);
+                ArrayList<Level> levelsList = new ArrayList<>();
+                levelsList.add(LevelManager.getLevel(1));
 
-                loginManager.savePlayerDatabase("players.txt");
-                loginManager.setCurrentPlayer(tempPlayer);
+                Player tempPlayer = new Player(name, password, phoneNumber, profileImage, levelsList);
+                LoginManager.addUser(tempPlayer);
 
-                root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("MainScreen-view.fxml")));
-                stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-                configureStage(stage, "Main");
+                LoginManager.savePlayerDatabase("players.txt");
+                LoginManager.setCurrentPlayer(tempPlayer);
+
+                StartScreenController.sceneGenerator(stage, root,"MainScreen-view.fxml", event, "Main Screen" );
             }
         }
     }

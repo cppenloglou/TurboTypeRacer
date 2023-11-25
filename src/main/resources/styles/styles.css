@@ -4,7 +4,7 @@
 }
 
 .containerBackground {
-  -fx-background-image: url("../assets/startScreen/mainBackgroundTheme.jpg");
+  -fx-background-image: url("../assets/backgrounds/mainBackgroundTheme.jpg");
   -fx-alignment: center ;
   -fx-padding: 10 ;
 }
@@ -17,16 +17,52 @@
     -fx-background-repeat: no-repeat;
     -fx-background-color: transparent;
     -fx-background-position: center;
-    -fx-background-image: url("../assets/startScreen/backgroundBtn.png");
+    -fx-background-image: url("../assets/buttons/backgroundBtn.png");
     -fx-alignment: center ;
     -fx-text-fill: black;
+}
+
+.levelPane {
+    -fx-background-color: black;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+    -fx-background-image: url("../assets/backgrounds/listBackground.png");
+    -fx-border-style: solid;
+    -fx-border-color: black;
+    -fx-border-width: 5px;
+}
+
+.levelPane .viewport {
+    -fx-background-color: transparent;
+}
+
+.levelPane .scroll-bar{
+    -fx-background-color: #BD2237;
+}
+
+.levelPane .scroll-bar:vertical .scroll-bar:horizontal{
+    -fx-background-color: #981b2b;
+}
+
+.levelPane .scroll-bar:vertical .scroll-bar:horizontal  .increment-button,
+.levelPane .scroll-bar:vertical .scroll-bar:horizontal  .decrement-button {
+    -fx-background-color: #981b2b;
+}
+
+.levelPane .scroll-bar:horizontal .thumb,
+.levelPane .scroll-bar:vertical .thumb {
+    -fx-background-color: #981b2b;
+}
+
+.levelPane > .corner{
+    -fx-background-color: #981b2b;
 }
 
 .statsList{
     -fx-text-fill: gold;
     -fx-font-weight: bold;
     -fx-background-color: transparent;
-    -fx-background-image: url("../assets/startScreen/listBackground.png");
+    -fx-background-image: url("../assets/backgrounds/listBackground.png");
     -fx-border-style: solid;
     -fx-border-color: black;
     -fx-border-width: 5px;
@@ -53,3 +89,102 @@
     -fx-visibility: hidden;
     -fx-scale-x: 0;
 }
+
+.tab-pane {
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-background-color: transparent;
+    -fx-background-image: url("../assets/backgrounds/listBackground.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+}
+
+.tab-pane .tab
+{
+    -fx-background-color: #981b2b;
+}
+
+.tab-pane .tab-header-background{
+    -fx-background-color: transparent;
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-color: #981b2b;
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: gold;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: #981b2b;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-row-cell {
+    -fx-background-color: transparent;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #BD2237;
+}
+
+.table-row-cell .table-cell {
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-alignment: CENTER;
+    -fx-text-fill: gold;
+}
+
+.table-view .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .scroll-bar{
+    -fx-background-color: #BD2237;
+}
+
+.table-view .scroll-bar:vertical .scroll-bar:horizontal{
+    -fx-background-color: #981b2b;
+}
+
+
+.table-view .scroll-bar:vertical .scroll-bar:horizontal  .increment-button,
+.table-view .scroll-bar:vertical .scroll-bar:horizontal  .decrement-button {
+    -fx-background-color: #981b2b;
+}
+
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color: #981b2b;
+}
+
+.centered-label {
+    -fx-alignment: bottom-center;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 27px;
+    -fx-effect: dropshadow(gaussian, white, 5, 0, 0, 0)
+}
+
+
