@@ -43,6 +43,7 @@ public class LeaderBoardScreenController {
         initializeTabPane();
     }
 
+    //Creates tabs for the tabPane and fills them.
     public void initializeTabPane(){
         for(Level level : LevelManager.getLevelDatabase()){
             Tab tab = new Tab("Level " + level.getLevelNum());
@@ -51,6 +52,8 @@ public class LeaderBoardScreenController {
             TableView<PlayerData> tableView = createTable();
             fillTable(tableView, level);
 
+            //Sorts the table if it's not empty.
+            //adds it to the tab and adds the tab to the tabPane.
             if(!tableView.getItems().isEmpty()){
                 tableView.getColumns().get(2).setSortType(TableColumn.SortType.DESCENDING);
                 tableView.getSortOrder().add(tableView.getColumns().get(2));
@@ -60,8 +63,10 @@ public class LeaderBoardScreenController {
                 tabPane.getTabs().add(tab);
             }
         }
-        tabPane.getTabs().remove(0);
+        tabPane.getTabs().remove(0); //Used to remove a placeholder tab.
     }
+
+    //Returns TableView containing three columns "Icon | Player | Wins".
     public TableView<PlayerData> createTable(){
         TableView<PlayerData> tableView = new TableView<>();
         tableView.setEditable(false);
@@ -74,10 +79,12 @@ public class LeaderBoardScreenController {
         playerNameColumn.setCellValueFactory(new PropertyValueFactory<>("Player"));
         winsColumn.setCellValueFactory(new PropertyValueFactory<>("Wins"));
 
+        //Stops users from being able to reorder the table's columns
         iconColumn.setReorderable(false);
         playerNameColumn.setReorderable(false);
         winsColumn.setReorderable(false);
 
+        //Sets the same size for every column
         tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
 
         tableView.getColumns().add(iconColumn);
@@ -87,6 +94,8 @@ public class LeaderBoardScreenController {
         return tableView;
     }
 
+    //Fills a table's columns using every player's data.
+    //The PlayerData class contains the player's profile icon, the player's name and their wins.
     public void fillTable(TableView<PlayerData> tableView, Level level){
         ObservableList<PlayerData> data = FXCollections.observableArrayList();
         for(Player p : LoginManager.getPlayerDatabase()){

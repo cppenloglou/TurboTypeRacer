@@ -35,25 +35,27 @@ public class LoginScreenController {
         assert userNameTextField != null : "fx:id=\"userNameTextField\" was not injected: check your FXML file 'LoginScreen-view.fxml'.";
     }
 
+    //Loads the EditProfileScreen.
     public void editProfile(MouseEvent event) throws IOException {
         String name = userNameTextField.getText();
         String password = passwordField.getText();
 
         if(name!=null && password !=null){
             if(LoginManager.isValidLogin(name,password)){
-                LoginManager.addCurrentPlayer(LoginManager.getPlayer(name,password));
+                LoginManager.addCurrentPlayer(LoginManager.getPlayer(name));
                 StartScreenController.sceneGenerator(stage, root, "EditProfileScreen-view.fxml", event, "Edit Profile Screen");
             }
         }
     }
 
+    //Loads the MainScreen.
     public void loginClicked(MouseEvent event) throws IOException {
         String name = userNameTextField.getText();
         String password = passwordField.getText();
 
         if(name!=null && password !=null){
             if(LoginManager.isValidLogin(name,password)){
-                LoginManager.addCurrentPlayer(LoginManager.getPlayer(name,password));
+                LoginManager.addCurrentPlayer(LoginManager.getPlayer(name));
                 StartScreenController.sceneGenerator(stage, root, "MainScreen-view.fxml", event, "Main Screen");
             }
         }

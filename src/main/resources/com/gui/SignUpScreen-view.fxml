@@ -12,106 +12,90 @@
 
 <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="containerBackground" stylesheets="@../../styles/styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.SignUpScreenController">
    <top>
-      <ImageView fitHeight="200.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-         <image>
-            <Image url="@../../assets/scene Elements/label.png" />
-         </image>
+      <ImageView fitHeight="200.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true"
+                 BorderPane.alignment="CENTER">
          <BorderPane.margin>
-            <Insets top="100.0" />
+            <Insets top="100.0"/>
          </BorderPane.margin>
+         <Image url="@../../assets/scene Elements/label.png"/>
       </ImageView>
    </top>
    <bottom>
       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="child" BorderPane.alignment="CENTER" />
    </bottom>
    <right>
-      <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="674.0" prefWidth="1922.0" styleClass="container" stylesheets="@../../styles/styles.css" BorderPane.alignment="CENTER">
-         <children>
-            <HBox alignment="CENTER" prefHeight="364.0" prefWidth="1880.0">
-               <children>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <ImageView fx:id="blueIcon" fitHeight="200.0" fitWidth="199.0" onMouseClicked="#chooseImage">
-                           <image>
-                              <Image url="@../../assets/profile/profileIconBlue.png" />
-                           </image>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </ImageView>
-                        <ImageView fx:id="greenIcon" fitHeight="200.0" fitWidth="199.0" onMouseClicked="#chooseImage">
-                           <image>
-                              <Image url="@../../assets/profile/profileIconGreen.png" />
-                           </image>
-                           <VBox.margin>
-                              <Insets top="10.0" />
-                           </VBox.margin>
-                        </ImageView>
-                     </children>
-                     <HBox.margin>
-                        <Insets right="30.0" />
-                     </HBox.margin>
-                  </VBox>
-                  <VBox prefHeight="266.0" prefWidth="351.0">
-                     <children>
-                        <TextField fx:id="userNameTextField" alignment="CENTER" prefHeight="380.0" prefWidth="400.0" promptText="Username" styleClass="textField" stylesheets="@../../styles/styles.css">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets bottom="30.0" />
-                           </VBox.margin>
-                        </TextField>
-                        <PasswordField fx:id="passwordField" prefHeight="380.0" prefWidth="400.0" promptText="Password" styleClass="textField" stylesheets="@../../styles/styles.css">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets bottom="30.0" />
-                           </VBox.margin>
-                        </PasswordField>
-                        <TextField fx:id="phoneNumberField" alignment="CENTER" prefHeight="380.0" prefWidth="400.0" promptText="PhoneNumber" styleClass="textField" stylesheets="@../../styles/styles.css">
-                           <font>
-                              <Font size="27.0" />
-                           </font>
-                        </TextField>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <ImageView fx:id="purpleIcon" fitHeight="200.0" fitWidth="199.0" onMouseClicked="#chooseImage">
-                           <image>
-                              <Image url="@../../assets/profile/profileIconPurple.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fx:id="redIcon" fitHeight="200.0" fitWidth="199.0" onMouseClicked="#chooseImage">
-                           <image>
-                              <Image url="@../../assets/profile/profileIconRed.png" />
-                           </image>
-                           <VBox.margin>
-                              <Insets top="10.0" />
-                           </VBox.margin>
-                        </ImageView>
-                     </children>
-                     <HBox.margin>
-                        <Insets left="30.0" />
-                     </HBox.margin>
-                  </VBox>
-               </children></HBox>
-            <ImageView fx:id="loginButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#signUpClicked" pickOnBounds="true" preserveRatio="true" styleClass="child">
-               <image>
-                  <Image url="@../../assets/buttons/signUpBtn.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="goBackButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#returnToMain" pickOnBounds="true" preserveRatio="true" styleClass="child">
-               <image>
-                  <Image url="@../../assets/buttons/goBackBtn.png" />
-               </image>
-            </ImageView>
-         </children>
+      <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="674.0" prefWidth="1922.0"
+            styleClass="container" stylesheets="@../../styles/styles.css" BorderPane.alignment="CENTER">
          <BorderPane.margin>
-            <Insets top="70.0" />
+            <Insets top="70.0"/>
          </BorderPane.margin>
+         <HBox alignment="CENTER" prefHeight="364.0" prefWidth="1880.0">
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets right="30.0"/>
+               </HBox.margin>
+               <ImageView fx:id="blueIcon" fitHeight="200.0" fitWidth="199.0" onMouseClicked="#chooseImage">
+                  <VBox.margin>
+                     <Insets/>
+                  </VBox.margin>
+                  <Image url="@../../assets/profile/profileIconBlue.png"/>
+               </ImageView>
+               <ImageView fx:id="greenIcon" fitHeight="200.0" fitWidth="199.0" onMouseClicked="#chooseImage">
+                  <VBox.margin>
+                     <Insets top="10.0"/>
+                  </VBox.margin>
+                  <Image url="@../../assets/profile/profileIconGreen.png"/>
+               </ImageView>
+            </VBox>
+            <VBox prefHeight="266.0" prefWidth="351.0">
+               <TextField fx:id="userNameTextField" alignment="CENTER" prefHeight="380.0" prefWidth="400.0"
+                          promptText="Username" styleClass="textField" stylesheets="@../../styles/styles.css">
+                  <font>
+                     <Font size="27.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets bottom="30.0"/>
+                  </VBox.margin>
+               </TextField>
+               <PasswordField fx:id="passwordField" prefHeight="380.0" prefWidth="400.0" promptText="Password"
+                              styleClass="textField" stylesheets="@../../styles/styles.css">
+                  <font>
+                     <Font size="27.0"/>
+                  </font>
+                  <VBox.margin>
+                     <Insets bottom="30.0"/>
+                  </VBox.margin>
+               </PasswordField>
+               <TextField fx:id="phoneNumberField" alignment="CENTER" prefHeight="380.0" prefWidth="400.0"
+                          promptText="PhoneNumber" styleClass="textField" stylesheets="@../../styles/styles.css">
+                  <font>
+                     <Font size="27.0"/>
+                  </font>
+               </TextField>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="30.0"/>
+               </HBox.margin>
+               <ImageView fx:id="purpleIcon" fitHeight="200.0" fitWidth="199.0" onMouseClicked="#chooseImage">
+                  <Image url="@../../assets/profile/profileIconPurple.png"/>
+               </ImageView>
+               <ImageView fx:id="redIcon" fitHeight="200.0" fitWidth="199.0" onMouseClicked="#chooseImage">
+                  <VBox.margin>
+                     <Insets top="10.0"/>
+                  </VBox.margin>
+                  <Image url="@../../assets/profile/profileIconRed.png"/>
+               </ImageView>
+            </VBox>
+         </HBox>
+         <ImageView fx:id="loginButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#signUpClicked"
+                    pickOnBounds="true" preserveRatio="true" styleClass="child">
+            <Image url="@../../assets/buttons/signUpBtn.png"/>
+         </ImageView>
+         <ImageView fx:id="goBackButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#returnToMain"
+                    pickOnBounds="true" preserveRatio="true" styleClass="child">
+            <Image url="@../../assets/buttons/goBackBtn.png"/>
+         </ImageView>
       </VBox>
    </right>
 </BorderPane>

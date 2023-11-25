@@ -7,29 +7,31 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class LoginManager {
+    private static Player currentPlayer; //Represents the player currently logged in.
+    private static ArrayList<Player> playerDatabase = new ArrayList<>(); //Stores all the players.
 
-    private static Player currentPlayer;
-    private static ArrayList<Player> playerDatabase = new ArrayList<>();
-
+    //Used to load the playerDatabase.
     public static void initializeLoginManager(String fileName) {
         String path = Objects.requireNonNull(StartScreen.class.getResource("/playerDb/")).getPath()+fileName;
         File dbFile = new File(path);
+        // Checks if a file named after the parameter "fileName" exists in the playDb directory.
         if(!dbFile.exists()){
             try{
-                dbFile.createNewFile();
+                dbFile.createNewFile(); //Creates file if it doesn't exist.
             } catch(Exception e){
                 e.printStackTrace();
             }
         }
         if(dbFile.length()!=0){
             try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(path))) {
-                playerDatabase = (ArrayList<Player>) in.readObject();
+                playerDatabase = (ArrayList<Player>) in.readObject(); //imports the stored playerDatabase.
             } catch (IOException | ClassNotFoundException e ) {
                 e.printStackTrace();
             }
         }
     }
 
+    //Used to save the playerDatabase.
     public static void savePlayerDatabase(String fileName){
         if(!playerDatabase.isEmpty()){
             String path = Objects.requireNonNull(StartScreen.class.getResource("/playerDb/" + fileName)).getPath();
@@ -43,6 +45,8 @@ public class LoginManager {
         }
     }
 
+    // Checks if a player with the specified name exists in the playerDatabase.
+    // Returns true if found, false otherwise. Returns false if playerDatabase is null.
     public static boolean playerExists(String name){
         if(playerDatabase==null){
             return false;
@@ -54,6 +58,9 @@ public class LoginManager {
         }
         return false;
     }
+
+    //Checks if a player gave the correct username and password.
+    //Returns true if he did, false otherwise.
     public static boolean isValidLogin(String username, String password) {
         if(playerDatabase==null){
             return false;
@@ -76,14 +83,16 @@ public class LoginManager {
         currentPlayer = p;
     }
 
-    public static Player getPlayer(String username, String password) {
+    //Returns the player with the following username if he exists.
+    //Returns null otherwise.
+    public static Player getPlayer(String username) {
 
         if(playerDatabase==null){
             return null;
         }
 
         for (Player p : playerDatabase) {
-            if(p.getName().equals(username) && p.getPassword().equals(password)){
+            if(p.getName().equals(username)){
                 return p;
             }
         }

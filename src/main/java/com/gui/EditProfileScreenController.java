@@ -30,6 +30,9 @@ public class EditProfileScreenController {
     private Parent root;
 
 
+    //Method called when a player picks a profile icon.
+    //Stores the icon on the profileImage attribute.
+    //Adds a glowing effect on the chosen profile icon.
     @FXML
     void chooseImage(MouseEvent event) {
         ImageView selectedImage = (ImageView) event.getSource();
@@ -42,6 +45,7 @@ public class EditProfileScreenController {
         profileImage = selectedImage.getImage().getUrl();
     }
 
+    //Returns the colour of the given profile icon.
     public String getIconColour(ImageView image){
         if (image.equals(redIcon)) {
             return "red";
@@ -56,6 +60,7 @@ public class EditProfileScreenController {
         return "black";
     }
 
+    //Returns the profile icon that corresponds to the following imageUrl.
     public ImageView getIconImageView(String imageUrl){
         if (imageUrl.equals(redIcon.getImage().getUrl())) {
             return redIcon;
@@ -72,28 +77,26 @@ public class EditProfileScreenController {
 
     @FXML
     void returnToMain(MouseEvent event) throws IOException {
-        if(LoginManager.getCurrentPlayer()!=null)
-            StartScreenController.sceneGenerator(stage, root, "MainScreen-view.fxml", event, "Main Screen");
-        else{
-            StartScreenController.sceneGenerator(stage, root, "StartScreen-view.fxml", event, "Start Screen");
-        }
+        StartScreenController.sceneGenerator(stage, root, "MainScreen-view.fxml", event, "Main Screen");
     }
 
+    //Used to update current player's info.
     @FXML
     void updateClicked(MouseEvent event) throws IOException {
         String name = userNameTextField.getText();
         String password = passwordField.getText();
         String phoneNumber = phoneNumberField.getText();
 
-        if(name!=null && password!=null && phoneNumber!=null && profileImage!=null){
+        if(name!=null && password!=null && phoneNumber!=null && profileImage!=null){ //Checks if every field is filled.
             if(!LoginManager.playerExists(name) || name.equals(LoginManager.getCurrentPlayer().getName())){
-                Player updatedPlayer = LoginManager.getPlayer(LoginManager.getCurrentPlayer().getName(), LoginManager.getCurrentPlayer().getPassword());
+                Player updatedPlayer = LoginManager.getCurrentPlayer();
+
                 updatedPlayer.setName(name);
                 updatedPlayer.setPassword(password);
                 updatedPlayer.setPhoneNumber(phoneNumber);
                 updatedPlayer.setImage(profileImage);
+
                 LoginManager.savePlayerDatabase("players.txt");
-                LoginManager.setCurrentPlayer(updatedPlayer);
 
                 StartScreenController.sceneGenerator(stage, root, "MainScreen-view.fxml", event, "Main Screen");
             }
@@ -110,11 +113,16 @@ public class EditProfileScreenController {
         assert purpleIcon != null : "fx:id=\"purpleIcon\" was not injected: check your FXML file 'EditProfileScreen-view.fxml'.";
         assert redIcon != null : "fx:id=\"redIcon\" was not injected: check your FXML file 'EditProfileScreen-view.fxml'.";
         assert userNameTextField != null : "fx:id=\"userNameTextField\" was not injected: check your FXML file 'EditProfileScreen-view.fxml'.";
+
         iconList.add(redIcon);
         iconList.add(blueIcon);
         iconList.add(greenIcon);
         iconList.add(purpleIcon);
 
+        initializeFields();
+    }
+
+    public void initializeFields(){
         userNameTextField.setText(LoginManager.getCurrentPlayer().getName());
         passwordField.setText(LoginManager.getCurrentPlayer().getPassword());
         phoneNumberField.setText(LoginManager.getCurrentPlayer().getPhoneNumber());

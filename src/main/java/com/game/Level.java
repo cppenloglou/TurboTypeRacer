@@ -9,14 +9,15 @@ import java.util.Objects;
 
 public class Level implements Serializable {
     private final int levelNum;
-    private final String levelPath;
-    private final ArrayList<String> wordsList = new ArrayList<>();
+    private final String levelPath; //Path of a txt file containing words that the user will need to type.
+    private final ArrayList<String> wordsList = new ArrayList<>(); //ArrayList that holds all the words from the mentioned above.
 
     public Level(int levelNum, String levelPath){
         this.levelNum = levelNum;
         this.levelPath = levelPath;
     }
 
+    //Method that reads every single line of a txt file and adds it into the wordList array.
     public void readFile(){
         if(wordsList.isEmpty()){
             try {

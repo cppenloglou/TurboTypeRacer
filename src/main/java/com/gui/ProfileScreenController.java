@@ -58,13 +58,16 @@ public class ProfileScreenController {
         assert updateBtn != null : "fx:id=\"updateBtn\" was not injected: check your FXML file 'ProfileScreen-view.fxml'.";
         assert userNameTextField != null : "fx:id=\"userNameTextField\" was not injected: check your FXML file 'ProfileScreen-view.fxml'.";
 
+        initializeFields();
+        initializeStatsList();
+    }
+
+    public void initializeFields(){
         userNameTextField.setText(LoginManager.getCurrentPlayer().getName());
         passwordField.setText(LoginManager.getCurrentPlayer().getPassword());
         phoneNumberField.setText(LoginManager.getCurrentPlayer().getPhoneNumber());
         String profileImageUrl = LoginManager.getCurrentPlayer().getProfileImage();
         profileImage.setImage((new Image(profileImageUrl)));
-
-        initializeStatsList();
     }
 
 }

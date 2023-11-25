@@ -38,16 +38,19 @@ public class LevelsScreenController {
         initializeLevels();
     }
 
+    //Fills tilePane with all the player's unlocked levels represented by an image and a label.
     public void initializeLevels(){
         for(Level level : LevelManager.getLevelDatabase()){
             if(LoginManager.getCurrentPlayer().getScoreMap().containsKey(level)){
                 AnchorPane pane = new AnchorPane();
 
                 ImageView levelIcon = new ImageView(new Image(Objects.requireNonNull(StartScreen.class.getResourceAsStream("/assets/scene Elements/levelIcon.png"))));
+                //Changes levelIcon's size to fit in the pane.
                 double ratio = Math.min(Screen.getPrimary().getBounds().getHeight() / levelIcon.getImage().getHeight(), Screen.getPrimary().getBounds().getWidth() / levelIcon.getImage().getWidth());
                 levelIcon.setFitHeight(levelIcon.getImage().getHeight()*ratio*0.14);
                 levelIcon.setFitWidth(levelIcon.getImage().getWidth()*ratio*0.14);
 
+                //Creates a centered label that contains the levelNum
                 Label levelLabel = new Label("Level " + level.getLevelNum());
                 levelLabel.setPrefHeight(levelIcon.getFitHeight());
                 levelLabel.setPrefWidth(levelIcon.getFitWidth());
@@ -55,7 +58,7 @@ public class LevelsScreenController {
 
                 pane.getChildren().addAll(levelIcon, levelLabel);
 
-                pane.setOnMouseClicked(getLevelListener());
+                pane.setOnMouseClicked(getLevelListener()); //Click listener that sets the current level using the info from the pane that is clicked.
 
                 tilePane.getChildren().add(pane);
             }

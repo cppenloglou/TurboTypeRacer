@@ -9,8 +9,9 @@ import java.util.Objects;
 public class LevelManager {
 
     private static Level currentLevel;
-    private static ArrayList<Level> levelDatabase = new ArrayList<>();
+    private static ArrayList<Level> levelDatabase = new ArrayList<>(); //ArrayList that contains all the game levels.
 
+    //Reads every txt file in the levelDb directory and creates the corresponding level objects storing them in the levelDatabase.
     public static void initializeLevels() {
         if(levelDatabase.isEmpty()){
             String path = Objects.requireNonNull(StartScreen.class.getResource("/levelDb")).getPath();
@@ -44,9 +45,9 @@ public class LevelManager {
         return currentLevel;
     }
 
-    public static Level getLevel(int level){
+    public static Level getLevel(int levelNum){
         for(Level l : levelDatabase){
-            if(l.getLevelNum()==level) return l;
+            if(l.getLevelNum()==levelNum) return l;
         }
         return null;
     }

@@ -2,6 +2,7 @@ package com.game;
 
 import javafx.scene.image.ImageView;
 
+//Utility class used by LeaderBoardScreenController class for creating the corresponding TableViews.
 public class PlayerData {
     private final ImageView icon;
     private final String playerName;

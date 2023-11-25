@@ -4,55 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4349fe6-15ab-47f3-8c96-c940a2b89be7" name="Changes" comment="Made Login manager use static methods, fixed path bug, added a LeaderBoard, levels, and a level selection screen.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/Level.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/LevelManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/PlayerData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gui/LeaderBoardScreenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gui/LevelsScreenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/scene Elements/levelIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LeaderBoardScreen-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LevelsScreen-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LevelsScreenController.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e4349fe6-15ab-47f3-8c96-c940a2b89be7" name="Changes" comment="Made the login manager use static methods, fixed path bug when reading playerdb, added a leaderBoard, levels, and a level selection screen.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/Level.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/LevelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/LevelManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/game/LoginManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/LoginManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/PlayerData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/PlayerData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/EditProfileScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/EditProfileScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LeaderBoardScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LeaderBoardScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LevelsScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LevelsScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LoginScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LoginScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/MainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/MainScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/ProfileScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/ProfileScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/SignUpScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/SignUpScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/StartScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/StartScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/StartScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/StartScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/startScreen/backgroundBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/backgroundBtn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/startScreen/chooseImageBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/chooseImageBtn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/startScreen/editProfileBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/editProfileBtn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/startScreen/goBackBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/goBackBtn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/startScreen/label.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/scene Elements/label.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/startScreen/leaderBoardBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/leaderBoardBtn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/startScreen/levelsBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/levelsBtn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/startScreen/listBackground.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/backgrounds/listBackground.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/startScreen/loginBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/loginBtn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/startScreen/mainBackgroundTheme.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/backgrounds/mainBackgroundTheme.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/startScreen/quitBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/quitBtn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/startScreen/settingsBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/settingsBtn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/startScreen/signUpBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/signUpBtn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/startScreen/statsBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/statsBtn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/startScreen/updateBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/updateBtn.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/EditProfileScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/EditProfileScreen-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/LeaderBoardScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LeaderBoardScreen-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/LevelsScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LevelsScreen-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/LevelsScreenController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LevelsScreenController.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/LoginScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LoginScreen-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/MainScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/MainScreen-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/ProfileScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/ProfileScreen-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/SignUpScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/SignUpScreen-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/StartScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/StartScreen-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,8 +47,21 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="5e6a93e5-0209-4a96-8559-e38386dbb48b" />
+        <option name="url" value="https://github.com/cppenloglou/TurboTypeRacer" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -87,19 +73,19 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "G:/giorgos_spinkl/IdeaProjects/TurboTypeRacer/src/main/resources/levelDb",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/giorgos_spinkl/IdeaProjects/TurboTypeRacer/src/main/resources/levelDb&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\levelDb" />
@@ -176,7 +162,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700591399064</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Made Login manager use static methods, fixed path bug, added a LeaderBoard, levels, and a level selection screen.">
+      <option name="closed" value="true" />
+      <created>1700924901110</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700924901110</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Made the login manager use static methods, fixed path bug when reading playerdb, added a leaderBoard, levels, and a level selection screen.">
+      <option name="closed" value="true" />
+      <created>1700924977452</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700924977452</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,7 +192,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -210,6 +212,7 @@
     <MESSAGE value="Initial Libs Setup" />
     <MESSAGE value="Added login and signup screen" />
     <MESSAGE value="Made Login manager use static methods, fixed path bug, added a LeaderBoard, levels, and a level selection screen." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made Login manager use static methods, fixed path bug, added a LeaderBoard, levels, and a level selection screen." />
+    <MESSAGE value="Made the login manager use static methods, fixed path bug when reading playerdb, added a leaderBoard, levels, and a level selection screen." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made the login manager use static methods, fixed path bug when reading playerdb, added a leaderBoard, levels, and a level selection screen." />
   </component>
 </project>

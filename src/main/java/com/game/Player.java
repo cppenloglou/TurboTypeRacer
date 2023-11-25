@@ -10,7 +10,7 @@ public class Player implements Serializable {
     private String password;
     private String phoneNumber;
     private String profileImage;
-    private HashMap<Level, Integer> scoreMap = new HashMap<>();
+    private HashMap<Level, Integer> scoreMap = new HashMap<>(); //Stores user scores for each level.
 
     public Player(String name, String password, String phoneNumber, String profileImage, ArrayList<Level> levels){
         this.name = name;

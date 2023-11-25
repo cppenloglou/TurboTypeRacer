@@ -79,12 +79,13 @@ public class SignUpScreenController {
 
     }
 
+    //Creates new player and loads the MainScreen.
     public void signUpClicked(MouseEvent event) throws IOException {
         String name = userNameTextField.getText();
         String password = passwordField.getText();
         String phoneNumber = phoneNumberField.getText();
 
-        if(name!=null && password!=null && phoneNumber!=null && profileImage!=null){
+        if(name!=null && password!=null && phoneNumber!=null && profileImage!=null){ //Checks if all the fields are filled
             if(!LoginManager.playerExists(name)){
 
                 ArrayList<Level> levelsList = new ArrayList<>();
