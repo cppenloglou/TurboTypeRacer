@@ -113,4 +113,9 @@ public class LeaderBoardScreenController {
         tableView.setItems(data);
     }
 
+    //Used to export all the player scores in the playerScores.txt file
+    public void exportScores(MouseEvent mouseEvent){
+        LoginManager.exportPlayerScores("playerScores.txt");
+    }
+
 }

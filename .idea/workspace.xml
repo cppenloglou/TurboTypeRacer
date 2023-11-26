@@ -4,28 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4349fe6-15ab-47f3-8c96-c940a2b89be7" name="Changes" comment="Made the login manager use static methods, fixed path bug when reading playerdb, added a leaderBoard, levels, and a level selection screen.">
+    <list default="true" id="e4349fe6-15ab-47f3-8c96-c940a2b89be7" name="Changes" comment="Added comments to the code">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/GameSettings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gui/SettingsScreenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/exportBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/saveBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gui/SettingsScreen-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/Level.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/LevelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/LevelManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/game/LoginManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/LoginManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/PlayerData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/PlayerData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/EditProfileScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/EditProfileScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LeaderBoardScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LeaderBoardScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LevelsScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LevelsScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LoginScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LoginScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/ProfileScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/ProfileScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/MainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/MainScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/SignUpScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/SignUpScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/EditProfileScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/EditProfileScreen-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/StartScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/StartScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/StartScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/StartScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/LeaderBoardScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LeaderBoardScreen-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/LevelsScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LevelsScreen-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/LevelsScreenController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LevelsScreenController.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/LoginScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LoginScreen-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/MainScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/MainScreen-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/ProfileScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/ProfileScreen-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/SignUpScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/SignUpScreen-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/LevelsScreenController.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/StartScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/StartScreen-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/playerDb/players.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,19 +72,20 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/giorgos_spinkl/IdeaProjects/TurboTypeRacer/src/main/resources/levelDb&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "G:/giorgos_spinkl/IdeaProjects/TurboTypeRacer/src/main/resources/levelDb",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\levelDb" />
@@ -178,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700924977452</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added comments to the code">
+      <option name="closed" value="true" />
+      <created>1700955851776</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1700955851776</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,6 +221,7 @@
     <MESSAGE value="Added login and signup screen" />
     <MESSAGE value="Made Login manager use static methods, fixed path bug, added a LeaderBoard, levels, and a level selection screen." />
     <MESSAGE value="Made the login manager use static methods, fixed path bug when reading playerdb, added a leaderBoard, levels, and a level selection screen." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made the login manager use static methods, fixed path bug when reading playerdb, added a leaderBoard, levels, and a level selection screen." />
+    <MESSAGE value="Added comments to the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added comments to the code" />
   </component>
 </project>

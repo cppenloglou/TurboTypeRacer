@@ -45,6 +45,27 @@ public class LoginManager {
         }
     }
 
+    public static void exportPlayerScores(String fileName){
+        if(!playerDatabase.isEmpty()){
+            String path = Objects.requireNonNull(StartScreen.class.getResource("/playerScores/")).getPath()+fileName;
+            try {
+                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(path));
+
+                for(Player p : playerDatabase){
+                    for(Level l : p.getScoreMap().keySet()){
+                        bufferedWriter.write("Player " + p.getName() + " has achieved " + p.getScore(l) + " victories on the " + l.getLevelNum() + " level!" + System.lineSeparator());
+                    }
+                    bufferedWriter.write(System.lineSeparator());
+                }
+
+                bufferedWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
     // Checks if a player with the specified name exists in the playerDatabase.
     // Returns true if found, false otherwise. Returns false if playerDatabase is null.
     public static boolean playerExists(String name){

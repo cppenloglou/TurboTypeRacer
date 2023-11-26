@@ -43,6 +43,7 @@ public class LoginScreenController {
         if(name!=null && password !=null){
             if(LoginManager.isValidLogin(name,password)){
                 LoginManager.addCurrentPlayer(LoginManager.getPlayer(name));
+                SettingsScreenController.setGameSettings(LoginManager.getCurrentPlayer().getGameSettings());
                 StartScreenController.sceneGenerator(stage, root, "EditProfileScreen-view.fxml", event, "Edit Profile Screen");
             }
         }
@@ -56,6 +57,7 @@ public class LoginScreenController {
         if(name!=null && password !=null){
             if(LoginManager.isValidLogin(name,password)){
                 LoginManager.addCurrentPlayer(LoginManager.getPlayer(name));
+                SettingsScreenController.setGameSettings(LoginManager.getCurrentPlayer().getGameSettings());
                 StartScreenController.sceneGenerator(stage, root, "MainScreen-view.fxml", event, "Main Screen");
             }
         }

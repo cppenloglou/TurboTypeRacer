@@ -32,13 +32,14 @@ public class MainScreenController {
     }
 
     @FXML
-    void settingsClicked(MouseEvent event) {
-
+    void settingsClicked(MouseEvent event) throws IOException {
+        StartScreenController.sceneGenerator(stage, root, "SettingsScreen-view.fxml", event, "Settings Screen");
     }
 
     @FXML
     void returnToMain(MouseEvent event) throws IOException {
         LoginManager.setCurrentPlayer(null);
+        SettingsScreenController.loadDefaultSettings("settings.txt");
         StartScreenController.sceneGenerator(stage, root, "StartScreen-view.fxml", event, "Start Screen");
     }
 

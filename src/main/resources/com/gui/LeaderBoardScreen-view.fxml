@@ -6,6 +6,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="containerBackground" stylesheets="@../../styles/styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.LeaderBoardScreenController">
@@ -18,21 +19,26 @@
         </ImageView>
     </top>
     <right>
-        <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="674.0" prefWidth="1922.0"
-              styleClass="container" stylesheets="@../../styles/styles.css" BorderPane.alignment="CENTER">
+        <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="674.0" prefWidth="1922.0" styleClass="container" stylesheets="@../../styles/styles.css" BorderPane.alignment="CENTER">
             <BorderPane.margin>
-                <Insets/>
+                <Insets />
             </BorderPane.margin>
             <TabPane fx:id="tabPane" prefHeight="591.0" prefWidth="1880.0" tabClosingPolicy="UNAVAILABLE">
                 <VBox.margin>
-                    <Insets left="500.0" right="500.0"/>
+                    <Insets left="500.0" right="500.0" />
                 </VBox.margin>
-                <Tab text="Level 1"/>
+                <Tab text="Level 1" />
             </TabPane>
-            <ImageView fx:id="goBackButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#returnToMain"
-                       pickOnBounds="true" preserveRatio="true" styleClass="child">
-                <Image url="@../../assets/buttons/goBackBtn.png"/>
-            </ImageView>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                <ImageView fitHeight="300.0" fitWidth="400.0" onMouseClicked="#exportScores" pickOnBounds="true"
+                           preserveRatio="true" styleClass="child">
+                    <Image url="@../../assets/buttons/exportBtn.png"/>
+                </ImageView>
+                <ImageView fx:id="goBackButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#returnToMain"
+                           pickOnBounds="true" preserveRatio="true" styleClass="child">
+                    <Image url="@../../assets/buttons/goBackBtn.png"/>
+                </ImageView>
+            </HBox>
         </VBox>
     </right>
 </BorderPane>

@@ -97,6 +97,7 @@ public class SignUpScreenController {
                 LoginManager.savePlayerDatabase("players.txt");
                 LoginManager.setCurrentPlayer(tempPlayer);
 
+                SettingsScreenController.setGameSettings(LoginManager.getCurrentPlayer().getGameSettings());
                 StartScreenController.sceneGenerator(stage, root,"MainScreen-view.fxml", event, "Main Screen" );
             }
         }

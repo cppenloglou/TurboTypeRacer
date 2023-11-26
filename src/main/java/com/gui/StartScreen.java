@@ -1,5 +1,6 @@
 package com.gui;
 
+import com.game.GameSettings;
 import com.game.LoginManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -22,11 +23,19 @@ public class StartScreen extends Application {
             throw new RuntimeException(e);
         }
 
+        GameSettings gameSettings = SettingsScreenController.loadDefaultSettings("settings.txt");
+
         Scene scene = new Scene(root);
         stage.setTitle("Start Screen");
         stage.setScene(scene);
-        stage.setFullScreen(false);
-        stage.setResizable(true);
+        if(gameSettings!=null && gameSettings.isFullScreen()) {
+            stage.setFullScreen(true);
+        } else{
+            stage.setFullScreen(false);
+            stage.setResizable(true);
+            stage.setMaximized(true);
+        }
+
         stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
         stage.show();
 

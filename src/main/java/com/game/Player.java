@@ -1,6 +1,8 @@
 package com.game;
 
 
+import com.gui.SettingsScreenController;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,6 +12,7 @@ public class Player implements Serializable {
     private String password;
     private String phoneNumber;
     private String profileImage;
+    private GameSettings gameSettings;
     private HashMap<Level, Integer> scoreMap = new HashMap<>(); //Stores user scores for each level.
 
     public Player(String name, String password, String phoneNumber, String profileImage, ArrayList<Level> levels){
@@ -18,6 +21,7 @@ public class Player implements Serializable {
         this.phoneNumber = phoneNumber;
         this.profileImage = profileImage;
         InitializeScoreMap(levels);
+        this.gameSettings = new GameSettings(SettingsScreenController.getGameSettings());
     }
 
     public void InitializeScoreMap(ArrayList<Level> levels) {
@@ -68,5 +72,13 @@ public class Player implements Serializable {
 
     public HashMap<Level, Integer> getScoreMap() {
         return this.scoreMap;
+    }
+
+    public GameSettings getGameSettings() {
+        return this.gameSettings;
+    }
+
+    public void setSettings(GameSettings gameSettings) {
+        this.gameSettings = gameSettings;
     }
 }

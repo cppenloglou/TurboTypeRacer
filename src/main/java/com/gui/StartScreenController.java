@@ -18,7 +18,7 @@ public class StartScreenController {
     private Stage stage;
     private Parent root;
     @FXML
-    private ImageView loginButton, signUpButton, quitButton,  leaderboardBtn;
+    private ImageView loginButton, signUpButton, quitButton,  leaderboardBtn, settingsButton;
 
     @FXML
     void initialize() {
@@ -26,6 +26,7 @@ public class StartScreenController {
         assert loginButton != null : "fx:id=\"loginButton\" was not injected: check your FXML file 'StartScreen-view.fxml'.";
         assert quitButton != null : "fx:id=\"quitButton\" was not injected: check your FXML file 'StartScreen-view.fxml'.";
         assert signUpButton != null : "fx:id=\"signUpButton\" was not injected: check your FXML file 'StartScreen-view.fxml'.";
+        assert settingsButton != null : "fx:id=\"settingsButton\" was not injected: check your FXML file 'StartScreen-view.fxml'.";
 
         LevelManager.initializeLevels();
     }
@@ -38,6 +39,9 @@ public class StartScreenController {
             sceneGenerator(stage, root,"SignUpScreen-view.fxml", event, "SignUp Screen");
         else if (event.getSource() == leaderboardBtn)
             sceneGenerator(stage,root,"LeaderBoardScreen-view.fxml", event, "LeaderBoard Screen");
+        else if (event.getSource() == settingsButton){
+            StartScreenController.sceneGenerator(stage, root, "SettingsScreen-view.fxml", event, "Settings Screen");
+        }
         else if (event.getSource() == quitButton){
             LoginManager.savePlayerDatabase("players.txt");
             System.exit(0);
@@ -49,8 +53,13 @@ public class StartScreenController {
 
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.getScene().setRoot(root);
-        stage.setFullScreen(false);
-        stage.setResizable(true);
+        if(SettingsScreenController.getGameSettings().isFullScreen()) {
+            stage.setFullScreen(true);
+        } else{
+            stage.setFullScreen(false);
+            stage.setResizable(true);
+            stage.setMaximized(true);
+        }
         stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
         stage.setTitle(Player_Screen);
         stage.show();

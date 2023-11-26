@@ -187,4 +187,34 @@
     -fx-effect: dropshadow(gaussian, white, 5, 0, 0, 0)
 }
 
+.checkBox{
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-color: transparent;
+    -fx-background-image: url("../assets/buttons/backgroundBtn.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+    -fx-padding: 0 0 0 70;
+     -fx-font-size: 35px;
+}
+
+.checkBox .box {
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-background-color: transparent;
+    -fx-background-image: url("../assets/backgrounds/listBackground.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+}
+
+.checkBox:selected .box .mark {
+    -fx-background-color: black;
+}
+
+.check-box:selected .text{
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 0 70;
+    -fx-font-size: 35px;
+}
 
