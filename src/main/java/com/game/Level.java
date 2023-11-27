@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Level implements Serializable {
@@ -24,7 +25,8 @@ public class Level implements Serializable {
                 BufferedReader reader = new BufferedReader(new FileReader(levelPath));
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    wordsList.add(line);
+                    String[] words = line.split("\\s+");
+                    wordsList.addAll(Arrays.asList(words));
                 }
                 reader.close();
             } catch (IOException e) {

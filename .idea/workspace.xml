@@ -5,21 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4349fe6-15ab-47f3-8c96-c940a2b89be7" name="Changes" comment="Added comments to the code">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2023_8_01_PM_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2023_8_01_PM__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/players.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/downBtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/profileBtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/upBtn.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car1.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car5.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2023_8_01_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2023_8_01_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/Level.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/ProfileScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/ProfileScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/MainScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/MainScreen-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/ProfileScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/ProfileScreen-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/levelDb/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/levelDb/1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +74,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/giorgos_spinkl/IdeaProjects/TurboTypeRacer/src/main/resources/levelDb&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/giorgos_spinkl/IdeaProjects/TurboTypeRacer/target/classes&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -86,15 +86,16 @@
       <recent name="com.game" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\target\classes" />
       <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\levelDb" />
       <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\com\gui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\xriso\IdeaProjects\TurboTypeRacer\src\main\resources\assets\vehicles" />
       <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources" />
+      <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\game" />
+      <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\assets\vehicles" />
+      <recent name="C:\Users\xriso\IdeaProjects\TurboTypeRacer\src\main\resources\assets\vehicles" />
       <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\assets\Small Scene Elements" />
-      <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\assets\backgrounds" />
-      <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\playerDb" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.gui" />

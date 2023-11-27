@@ -31,9 +31,7 @@ public class ProfileScreenController {
     private Stage stage;
     private Parent root;
 
-    String vehicle = "/assets/vehicles/car";
-    int numberOfcar = 1;
-
+    int numberOfCar = 1;
 
     @FXML
     void returnToMain(MouseEvent event) throws IOException {
@@ -54,37 +52,27 @@ public class ProfileScreenController {
         }
     }
 
+    //Method used when player is selecting a car
     @FXML
     void changeCar(MouseEvent event) {
-
         Player currentPlayer = LoginManager.getCurrentPlayer();
         ArrayList<Vehicle> garage = currentPlayer.getGarage();
-        int currentPlayerAvailableCars = garage.size();
+        int currentPlayerAvailableCarsAmount = LoginManager.getCurrentPlayer().getGarage().size();
 
         if (event.getSource() == downArrowBtn)
-            numberOfcar++;
+            numberOfCar++;
 
         else if (event.getSource() == upArrowBtn)
-            numberOfcar--;
+            numberOfCar--;
 
-        String input = garage.get(numberOfcar - 1).getImageUrl();
-        int index = input.lastIndexOf("r") + 1;
-        System.out.println("index: " + index);
-        int number = Integer.parseInt(String.valueOf(input.charAt(index)));
-        System.out.println("number: " + number);
+        String showingCar = garage.get(numberOfCar-1).getImageUrl(); //Loads next cars image
+        garageVehicleSelectionImageView.setImage(new Image(Objects.requireNonNull(StartScreen.class.getResourceAsStream(showingCar))));
+        currentPlayer.setSelectedCar(garage.get(numberOfCar-1)); //Stores the selected car on the player
 
-        // Create the new string
-        String result = "/assets/vehicles/car" + number + ".png";
-
-        garageVehicleSelectionImageView.setImage(new Image(Objects.requireNonNull(StartScreen.class.getResourceAsStream(result))));
-
-
-
-        if (numberOfcar == 1) {downArrowBtn.setVisible(true); upArrowBtn.setVisible(false);}
-        else if (numberOfcar > 1 && numberOfcar < currentPlayerAvailableCars) {downArrowBtn.setVisible(true); upArrowBtn.setVisible(true);}
-        else if (numberOfcar == currentPlayerAvailableCars) {downArrowBtn.setVisible(false); upArrowBtn.setVisible(true);}
-
-
+        //Handles the visibility of the arrow buttons
+        if (numberOfCar == 1) {downArrowBtn.setVisible(true); upArrowBtn.setVisible(false);}
+        else if (numberOfCar > 1 && numberOfCar < currentPlayerAvailableCarsAmount) {downArrowBtn.setVisible(true); upArrowBtn.setVisible(true);}
+        else if (numberOfCar == currentPlayerAvailableCarsAmount) {downArrowBtn.setVisible(false); upArrowBtn.setVisible(true);}
     }
 
     @FXML
@@ -100,10 +88,8 @@ public class ProfileScreenController {
         assert updateBtn != null : "fx:id=\"updateBtn\" was not injected: check your FXML file 'ProfileScreen-view.fxml'.";
         assert userNameTextField != null : "fx:id=\"userNameTextField\" was not injected: check your FXML file 'ProfileScreen-view.fxml'.";
 
-        Player currentPlayer = LoginManager.getCurrentPlayer();
-        ArrayList<Vehicle> garage = currentPlayer.getGarage();
-        int currentPlayerAvailableCars = garage.size();
-        if(currentPlayerAvailableCars > 1) {downArrowBtn.setVisible(true);}
+        int currentPlayerAvailableCars = LoginManager.getCurrentPlayer().getGarage().size();
+        if(currentPlayerAvailableCars > 1) downArrowBtn.setVisible(true);
 
         initializeFields();
         initializeStatsList();

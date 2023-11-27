@@ -13,6 +13,7 @@ public class Player implements Serializable {
     private String phoneNumber;
     private String profileImage;
     private GameSettings gameSettings;
+    private Vehicle selectedCar;
     private ArrayList<Vehicle> garageVehicles = new ArrayList<>();
     private HashMap<Level, Integer> scoreMap = new HashMap<>(); //Stores user scores for each level.
 
@@ -22,8 +23,8 @@ public class Player implements Serializable {
         this.phoneNumber = phoneNumber;
         this.profileImage = profileImage;
         InitializeScoreMap(levels);
-        garageVehicles.add(new Vehicle("Car1", "/assets/vehicles/car1.png"));
-        garageVehicles.add(new Vehicle("Car1", "/assets/vehicles/car2.png"));
+        this.selectedCar = new Vehicle("Car1", "/assets/vehicles/car1.png");
+        garageVehicles.add(this.selectedCar);
         this.gameSettings = new GameSettings(SettingsScreenController.getGameSettings());
     }
 
@@ -88,5 +89,13 @@ public class Player implements Serializable {
 
     public void setSettings(GameSettings gameSettings) {
         this.gameSettings = gameSettings;
+    }
+
+    public Vehicle getSelectedCar() {
+        return selectedCar;
+    }
+
+    public void setSelectedCar(Vehicle selectedCar) {
+        this.selectedCar = selectedCar;
     }
 }
