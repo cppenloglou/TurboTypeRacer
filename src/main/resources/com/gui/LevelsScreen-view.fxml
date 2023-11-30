@@ -31,7 +31,7 @@
                 </padding>
                 <TilePane fx:id="tilePane" alignment="CENTER" hgap="30.0" prefHeight="527.0" prefWidth="1188.0" vgap="30.0" />
             </ScrollPane>
-            <ImageView fx:id="goBackButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#returnToMain" pickOnBounds="true" preserveRatio="true" styleClass="child">
+            <ImageView fx:id="goBackButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#returnToMain" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" pickOnBounds="true" preserveRatio="true" styleClass="child">
                 <Image url="@../../assets/buttons/goBackBtn.png" />
             </ImageView>
         </VBox>

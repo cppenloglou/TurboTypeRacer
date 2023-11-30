@@ -27,7 +27,17 @@ public class LeaderBoardScreenController {
     private Parent root;
 
     @FXML
+    void animationPop(MouseEvent event) {
+        ((ImageView)event.getSource()).setStyle("-fx-effect: dropShadow(gaussian, " + "#E34255" + ", 28, 0.7, 0, 0)");
+    }
+    @FXML
+    void animationPopUp(MouseEvent event) {
+        ((ImageView)event.getSource()).setStyle(null);
+    }
+
+    @FXML
     void returnToMain(MouseEvent event) throws IOException {
+        Music.playButtonSound();
         if(LoginManager.getCurrentPlayer()!=null){
             StartScreenController.sceneGenerator(stage,root,"MainScreen-view.fxml", event, "Main Screen");
         } else {
@@ -115,6 +125,7 @@ public class LeaderBoardScreenController {
 
     //Used to export all the player scores in the playerScores.txt file
     public void exportScores(MouseEvent mouseEvent){
+        Music.playButtonSound();
         LoginManager.exportPlayerScores("playerScores.txt");
     }
 

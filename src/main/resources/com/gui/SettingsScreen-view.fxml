@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="containerBackground" stylesheets="@../../styles/styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.SettingsScreenController">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="containerBackground" stylesheets="@../../styles/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.SettingsScreenController">
    <top>
        <ImageView fitHeight="200.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
            <BorderPane.margin>
@@ -22,7 +22,7 @@
    </bottom>
    <center>
        <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="674.0" prefWidth="1922.0" styleClass="container" stylesheets="@../../styles/styles.css" BorderPane.alignment="CENTER">
-         <CheckBox fx:id="fullscreenCheckBox" mnemonicParsing="false" prefHeight="150.0" prefWidth="400.0" styleClass="checkBox" stylesheets="@../../styles/styles.css" text="FullScreen">
+         <CheckBox fx:id="fullscreenCheckBox" mnemonicParsing="false" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" prefHeight="150.0" prefWidth="400.0" styleClass="checkBox" stylesheets="@../../styles/styles.css" text="FullScreen">
             <font>
                <Font size="35.0" />
             </font>
@@ -30,7 +30,7 @@
                <Insets left="70.0" />
             </padding>
          </CheckBox>
-         <CheckBox fx:id="musicCheckBox" mnemonicParsing="false" prefHeight="150.0" prefWidth="400.0" styleClass="checkBox" stylesheets="@../../styles/styles.css" text="Music">
+         <CheckBox fx:id="musicCheckBox" mnemonicParsing="false" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" prefHeight="150.0" prefWidth="400.0" styleClass="checkBox" stylesheets="@../../styles/styles.css" text="Music">
             <font>
                <Font size="35.0" />
             </font>
@@ -38,7 +38,7 @@
                <Insets left="70.0" />
             </padding>
          </CheckBox>
-         <CheckBox fx:id="soundEffectsCheckBox" mnemonicParsing="false" prefHeight="150.0" prefWidth="400.0" styleClass="checkBox" stylesheets="@../../styles/styles.css" text="SoundEffects">
+         <CheckBox fx:id="soundEffectsCheckBox" mnemonicParsing="false" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" prefHeight="150.0" prefWidth="400.0" styleClass="checkBox" stylesheets="@../../styles/styles.css" text="SoundEffects">
             <font>
                <Font size="35.0" />
             </font>
@@ -49,11 +49,10 @@
                <Insets left="70.0" />
             </padding>
          </CheckBox>
-           <ImageView fitHeight="300.0" fitWidth="400.0" onMouseClicked="#saveSettingsClicked" pickOnBounds="true"
-                      preserveRatio="true" styleClass="child">
-               <Image url="@../../assets/buttons/saveBtn.png"/>
+           <ImageView fitHeight="300.0" fitWidth="400.0" onMouseClicked="#saveSettingsClicked" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" pickOnBounds="true" preserveRatio="true" styleClass="child">
+               <Image url="@../../assets/buttons/saveBtn.png" />
            </ImageView>
-           <ImageView fx:id="goBackButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#returnToMain" pickOnBounds="true" preserveRatio="true" styleClass="child">
+           <ImageView fx:id="goBackButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#returnToMain" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" pickOnBounds="true" preserveRatio="true" styleClass="child">
                <Image url="@../../assets/buttons/goBackBtn.png" />
            </ImageView>
        </VBox>

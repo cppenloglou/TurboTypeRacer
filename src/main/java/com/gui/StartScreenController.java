@@ -1,7 +1,9 @@
 package com.gui;
 
+import com.game.GameSettings;
 import com.game.LevelManager;
 import com.game.LoginManager;
+import com.game.Music;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,6 +20,7 @@ import java.util.Objects;
 public class StartScreenController {
     private Stage stage;
     private Parent root;
+
     @FXML
     private ImageView loginButton, signUpButton, quitButton,  leaderboardBtn, settingsButton;
 
@@ -33,7 +36,17 @@ public class StartScreenController {
     }
 
     @FXML
+    void animationPop(MouseEvent event) {
+        ((ImageView)event.getSource()).setStyle("-fx-effect: dropShadow(gaussian, " + "#E34255" + ", 28, 0.7, 0, 0)");
+    }
+    @FXML
+    void animationPopUp(MouseEvent event) {
+        ((ImageView)event.getSource()).setStyle(null);
+    }
+
+    @FXML
     void mouseClicked(MouseEvent event) throws IOException {
+        Music.playButtonSound();
         if (event.getSource() == loginButton)
             sceneGenerator(stage, root, "LoginScreen-view.fxml", event, "Login Screen");
         else if (event.getSource() == signUpButton)

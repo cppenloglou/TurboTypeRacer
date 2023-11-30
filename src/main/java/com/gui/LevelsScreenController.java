@@ -3,6 +3,7 @@ package com.gui;
 import com.game.Level;
 import com.game.LevelManager;
 import com.game.LoginManager;
+import com.game.Music;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
@@ -27,7 +28,17 @@ public class LevelsScreenController {
     private Parent root;
 
     @FXML
+    void animationPop(MouseEvent event) {
+        ((ImageView)event.getSource()).setStyle("-fx-effect: dropShadow(gaussian, " + "#E34255" + ", 28, 0.7, 0, 0)");
+    }
+    @FXML
+    void animationPopUp(MouseEvent event) {
+        ((ImageView)event.getSource()).setStyle(null);
+    }
+
+    @FXML
     void returnToMain(MouseEvent event) throws IOException {
+        Music.playButtonSound();
         StartScreenController.sceneGenerator(stage, root, "MainScreen-view.fxml", event, "Main Screen");
     }
 
@@ -49,7 +60,6 @@ public class LevelsScreenController {
                 double ratio = Math.min(Screen.getPrimary().getBounds().getHeight() / levelIcon.getImage().getHeight(), Screen.getPrimary().getBounds().getWidth() / levelIcon.getImage().getWidth());
                 levelIcon.setFitHeight(levelIcon.getImage().getHeight()*ratio*0.14);
                 levelIcon.setFitWidth(levelIcon.getImage().getWidth()*ratio*0.14);
-
                 //Creates a centered label that contains the levelNum
                 Label levelLabel = new Label("Level " + level.getLevelNum());
                 levelLabel.setPrefHeight(levelIcon.getFitHeight());
@@ -78,5 +88,4 @@ public class LevelsScreenController {
             }
         };
     }
-
 }

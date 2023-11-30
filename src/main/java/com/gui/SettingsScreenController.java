@@ -2,8 +2,10 @@ package com.gui;
 
 import com.game.GameSettings;
 import com.game.LoginManager;
+import com.game.Music;
 import com.game.Player;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.CheckBox;
 import javafx.scene.image.ImageView;
@@ -24,7 +26,17 @@ public class SettingsScreenController {
     private Parent root;
 
     @FXML
+    void animationPop(MouseEvent event) {
+        ((Node)event.getSource()).setStyle("-fx-effect: dropShadow(gaussian, " + "#E34255" + ", 28, 0.7, 0, 0)");
+    }
+    @FXML
+    void animationPopUp(MouseEvent event) {
+        ((Node)event.getSource()).setStyle(null);
+    }
+
+    @FXML
     void returnToMain(MouseEvent event) throws IOException {
+        Music.playButtonSound();
         if(LoginManager.getCurrentPlayer()!=null){
             StartScreenController.sceneGenerator(stage,root,"MainScreen-view.fxml", event, "Main Screen");
         } else {
@@ -61,9 +73,11 @@ public class SettingsScreenController {
         Player currentPlayer = LoginManager.getCurrentPlayer();
         if (currentPlayer != null){
             currentPlayer.setSettings(gameSettings);
+            Music.changeSong(Music.getStartScreenSong());
             StartScreenController.sceneGenerator(stage, root, "MainScreen-view.fxml", event, "Main Screen");
         } else {
             saveSettings("settings.txt", gameSettings);
+            Music.changeSong(Music.getStartScreenSong());
             StartScreenController.sceneGenerator(stage, root, "StartScreen-view.fxml", event, "Start Screen");
         }
     }
@@ -97,6 +111,7 @@ public class SettingsScreenController {
 
     //Stores default settings in settingsFile.txt.
     public static void saveSettings(String fileName, GameSettings gameSettings){
+        Music.playButtonSound();
         String path = Objects.requireNonNull(StartScreen.class.getResource("/settings/" + fileName)).getPath();
         try (FileOutputStream fos = new FileOutputStream(path);
              ObjectOutputStream oos = new ObjectOutputStream(fos)) {

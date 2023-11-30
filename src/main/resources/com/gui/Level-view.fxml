@@ -6,54 +6,74 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" focusTraversable="true" minHeight="1080.0" minWidth="1920.0"
-            stylesheets="@../../styles/styles.css" xmlns="http://javafx.com/javafx/19"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.LevelController">
-   <TextField layoutX="814.0" layoutY="912.0" onKeyPressed="#checkText" prefHeight="106.0" prefWidth="292.0"
-              styleClass="typeField" stylesheets="@../../styles/styles.css">
-      <font>
-         <Font size="60.0"/>
-      </font>
-   </TextField>
-   <ImageView fx:id="computerCar" fitHeight="136.0" fitWidth="200.0" layoutX="1451.0" layoutY="808.0">
-      <Image url="@../../assets/vehicles/car1.png"/>
-   </ImageView>
-   <ImageView fx:id="playerCar" fitHeight="136.0" fitWidth="200.0" layoutX="1258.0" layoutY="917.0">
-      <Image url="@../../assets/vehicles/car1.png"/>
-   </ImageView>
-   <Label fx:id="wordLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="828.0" layoutY="73.0" prefHeight="103.0"
-          prefWidth="264.0" textAlignment="CENTER">
-      <font>
-         <Font name="Arial" size="70.0"/>
-      </font>
-   </Label>
-   <VBox fx:id="endBox" alignment="CENTER" minHeight="1080.0" minWidth="1920.0" visible="false">
-      <ImageView fx:id="result" fitHeight="269.0" fitWidth="717.0">
-         <VBox.margin>
-            <Insets/>
-         </VBox.margin>
-         <Image url="@../../assets/scene Elements/youWinTitle.png"/>
-      </ImageView>
-      <ImageView fitHeight="115.0" fitWidth="307.0" onMouseClicked="#goBack">
-         <Image url="@../../assets/buttons/goBackBtn.png"/>
-      </ImageView>
-   </VBox>
-   <ImageView fitHeight="84.0" fitWidth="80.0" layoutX="59.0" layoutY="936.0" onMouseClicked="#goBack">
-      <Image url="@../../assets/buttons/goBack.png"/>
-   </ImageView>
-   <HBox fx:id="hBox" layoutX="1603.0" layoutY="55.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-      <ImageView fitHeight="81.0" fitWidth="89.0">
-         <Image url="@../../assets/scene Elements/heart.png"/>
-      </ImageView>
-      <ImageView fitHeight="81.0" fitWidth="89.0">
-         <Image url="@../../assets/scene Elements/heart.png"/>
-      </ImageView>
-      <ImageView fitHeight="81.0" fitWidth="89.0">
-         <Image url="@../../assets/scene Elements/heart.png"/>
-      </ImageView>
-   </HBox>
-</AnchorPane>
+
+<BorderPane fx:id="borderPane" styleClass="firstMap" stylesheets="@../../styles/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.LevelController">
+   <top>
+      <HBox alignment="CENTER_RIGHT" minWidth="1920.0" spacing="540.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="wordLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="103.0" prefWidth="264.0" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial" size="70.0" />
+               </font>
+            </Label>
+            <HBox fx:id="hBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <ImageView fitHeight="81.0" fitWidth="89.0">
+                  <Image url="@../../assets/scene Elements/heart.png" />
+               </ImageView>
+               <ImageView fitHeight="81.0" fitWidth="89.0">
+                  <Image url="@../../assets/scene Elements/heart.png" />
+               </ImageView>
+               <ImageView fitHeight="81.0" fitWidth="89.0">
+                  <Image url="@../../assets/scene Elements/heart.png" />
+               </ImageView>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="720.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="84.0" fitWidth="80.0" onMouseClicked="#goBack" onMouseEntered="#animationPop" onMouseExited="#animationPopUp">
+               <Image url="@../../assets/buttons/goBack.png" />
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <TextField onKeyPressed="#checkText" prefHeight="106.0" prefWidth="292.0" styleClass="typeField" stylesheets="@../../styles/styles.css">
+               <font>
+                  <Font size="60.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <AnchorPane fx:id="anchorPane" focusTraversable="true" minHeight="815.0" minWidth="1920.0" prefHeight="849.0" prefWidth="1920.0" stylesheets="@../../styles/styles.css" BorderPane.alignment="CENTER">
+         <ImageView fx:id="computerCar" fitHeight="136.0" fitWidth="200.0" layoutX="1240.0" layoutY="612.0">
+            <Image url="@../../assets/vehicles/car1.png" />
+         </ImageView>
+         <ImageView fx:id="playerCar" fitHeight="136.0" fitWidth="200.0" layoutX="1066.0" layoutY="711.0">
+            <Image url="@../../assets/vehicles/car1.png" />
+         </ImageView>
+         <VBox fx:id="endBox" alignment="CENTER" minHeight="1080.0" minWidth="1920.0" visible="false">
+            <ImageView fx:id="result" fitHeight="269.0" fitWidth="717.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <Image url="@../../assets/scene Elements/youWinTitle.png" />
+            </ImageView>
+            <ImageView fitHeight="115.0" fitWidth="307.0" onMouseClicked="#goBack">
+               <Image url="@../../assets/buttons/goBackBtn.png" />
+            </ImageView>
+         </VBox>
+      </AnchorPane>
+   </center>
+</BorderPane>

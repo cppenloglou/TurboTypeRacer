@@ -1,8 +1,10 @@
 package com.gui;
 
 import com.game.LoginManager;
+import com.game.Music;
 import com.game.Player;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -29,12 +31,22 @@ public class EditProfileScreenController {
     private Stage stage;
     private Parent root;
 
+    @FXML
+    void animationPop(MouseEvent event) {
+        ((Node)event.getSource()).setStyle("-fx-effect: dropShadow(gaussian, " + "#E34255" + ", 28, 0.7, 0, 0)");
+    }
+    @FXML
+    void animationPopUp(MouseEvent event) {
+        ((Node)event.getSource()).setStyle(null);
+    }
+
 
     //Method called when a player picks a profile icon.
     //Stores the icon on the profileImage attribute.
     //Adds a glowing effect on the chosen profile icon.
     @FXML
     void chooseImage(MouseEvent event) {
+        Music.playButtonSound();
         ImageView selectedImage = (ImageView) event.getSource();
         for(ImageView image : iconList){
             if(image!=selectedImage){
@@ -77,12 +89,14 @@ public class EditProfileScreenController {
 
     @FXML
     void returnToMain(MouseEvent event) throws IOException {
+        Music.playButtonSound();
         StartScreenController.sceneGenerator(stage, root, "MainScreen-view.fxml", event, "Main Screen");
     }
 
     //Used to update current player's info.
     @FXML
     void updateClicked(MouseEvent event) throws IOException {
+        Music.playButtonSound();
         String name = userNameTextField.getText();
         String password = passwordField.getText();
         String phoneNumber = phoneNumberField.getText();

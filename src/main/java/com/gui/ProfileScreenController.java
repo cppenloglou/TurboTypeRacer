@@ -4,10 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
 
-import com.game.Level;
-import com.game.LoginManager;
-import com.game.Player;
-import com.game.Vehicle;
+import com.game.*;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.control.ListView;
@@ -33,13 +30,24 @@ public class ProfileScreenController {
     private static int numberOfCar = 1;
 
     @FXML
+    void animationPop(MouseEvent event) {
+        ((ImageView)event.getSource()).setStyle("-fx-effect: dropShadow(gaussian, " + "#E34255" + ", 28, 0.7, 0, 0)");
+    }
+    @FXML
+    void animationPopUp(MouseEvent event) {
+        ((ImageView)event.getSource()).setStyle(null);
+    }
+
+    @FXML
     void returnToMain(MouseEvent event) throws IOException {
+        Music.playButtonSound();
         StartScreenController.sceneGenerator(stage, root, "MainScreen-view.fxml", event, "Main Screen");
 
     }
 
     @FXML
     void updateClicked(MouseEvent event) throws IOException {
+        Music.playButtonSound();
         StartScreenController.sceneGenerator(stage, root, "EditProfileScreen-view.fxml", event, "Edit Profile Screen");
     }
 
@@ -54,6 +62,7 @@ public class ProfileScreenController {
     //Method used when player is selecting a car
     @FXML
     void changeCar(MouseEvent event) {
+        Music.playButtonSound();
         Player currentPlayer = LoginManager.getCurrentPlayer();
         ArrayList<Vehicle> garage = currentPlayer.getGarage();
         int currentPlayerAvailableCarsAmount = LoginManager.getCurrentPlayer().getGarage().size();

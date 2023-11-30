@@ -2,7 +2,9 @@ package com.gui;
 
 
 import com.game.LoginManager;
+import com.game.Music;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -22,8 +24,19 @@ public class LoginScreenController {
     private Stage stage;
     private Parent root;
 
+
+    @FXML
+    void animationPop(MouseEvent event) {
+        ((Node)event.getSource()).setStyle("-fx-effect: dropShadow(gaussian, " + "#E34255" + ", 28, 0.7, 0, 0)");
+    }
+    @FXML
+    void animationPopUp(MouseEvent event) {
+        ((Node)event.getSource()).setStyle(null);
+    }
+
     @FXML
     public void returnToMain(MouseEvent event) throws IOException {
+        Music.playButtonSound();
         StartScreenController.sceneGenerator(stage, root, "StartScreen-view.fxml", event, "Start Screen");
     }
 
@@ -37,6 +50,7 @@ public class LoginScreenController {
 
     //Loads the EditProfileScreen.
     public void editProfile(MouseEvent event) throws IOException {
+        Music.playButtonSound();
         String name = userNameTextField.getText();
         String password = passwordField.getText();
 
@@ -44,6 +58,7 @@ public class LoginScreenController {
             if(LoginManager.isValidLogin(name,password)){
                 LoginManager.addCurrentPlayer(LoginManager.getPlayer(name));
                 SettingsScreenController.setGameSettings(LoginManager.getCurrentPlayer().getGameSettings());
+                new Music();
                 StartScreenController.sceneGenerator(stage, root, "EditProfileScreen-view.fxml", event, "Edit Profile Screen");
             }
         }
@@ -51,6 +66,7 @@ public class LoginScreenController {
 
     //Loads the MainScreen.
     public void loginClicked(MouseEvent event) throws IOException {
+        Music.playButtonSound();
         String name = userNameTextField.getText();
         String password = passwordField.getText();
 
@@ -58,6 +74,7 @@ public class LoginScreenController {
             if(LoginManager.isValidLogin(name,password)){
                 LoginManager.addCurrentPlayer(LoginManager.getPlayer(name));
                 SettingsScreenController.setGameSettings(LoginManager.getCurrentPlayer().getGameSettings());
+                new Music();
                 StartScreenController.sceneGenerator(stage, root, "MainScreen-view.fxml", event, "Main Screen");
             }
         }

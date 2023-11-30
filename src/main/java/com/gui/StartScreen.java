@@ -2,6 +2,7 @@ package com.gui;
 
 import com.game.GameSettings;
 import com.game.LoginManager;
+import com.game.Music;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -28,17 +29,21 @@ public class StartScreen extends Application {
         Scene scene = new Scene(root);
         stage.setTitle("Start Screen");
         stage.setScene(scene);
-        if(gameSettings!=null && gameSettings.isFullScreen()) {
+
+        if (gameSettings != null && gameSettings.isFullScreen()) {
             stage.setFullScreen(true);
-        } else{
+        } else {
             stage.setFullScreen(false);
             stage.setMaximized(true);
         }
+
 
         stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
         stage.show();
 
         LoginManager.initializeLoginManager("players.txt");
+        
+        new Music();
     }
 
     public static void main(String[] args) {

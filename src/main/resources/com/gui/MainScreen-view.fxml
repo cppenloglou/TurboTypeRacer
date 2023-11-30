@@ -35,20 +35,20 @@
                <VBox.margin>
                    <Insets left="500.0" right="500.0" />
                </VBox.margin>
-               <ImageView fx:id="leaderboardBtn" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#leaderboardClicked" pickOnBounds="true" preserveRatio="true" styleClass="child" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <ImageView fx:id="leaderboardBtn" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#mouseClicked" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" pickOnBounds="true" preserveRatio="true" styleClass="child" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                    <Image url="@../../assets/buttons/leaderBoardBtn.png" />
                </ImageView>
-               <ImageView fx:id="profileBtn" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#profileClicked" pickOnBounds="true" preserveRatio="true" styleClass="child" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <ImageView fx:id="profileBtn" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#mouseClicked" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" pickOnBounds="true" preserveRatio="true" styleClass="child" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                    <Image url="@../../assets/buttons/profileBtn.png" />
                </ImageView>
-               <ImageView fx:id="settingsBtn" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#settingsClicked" pickOnBounds="true" preserveRatio="true" styleClass="child" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <ImageView fx:id="settingsBtn" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#mouseClicked" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" pickOnBounds="true" preserveRatio="true" styleClass="child" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                    <Image url="@../../assets/buttons/settingsBtn.png" />
                </ImageView>
-               <ImageView fx:id="levelsBtn" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#levelsClicked" pickOnBounds="true" preserveRatio="true" styleClass="child" GridPane.halignment="CENTER">
+               <ImageView fx:id="levelsBtn" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#mouseClicked" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" pickOnBounds="true" preserveRatio="true" styleClass="child" GridPane.halignment="CENTER">
                    <Image url="@../../assets/buttons/levelsBtn.png" />
                </ImageView>
            </GridPane>
-           <ImageView fx:id="goBackButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#returnToMain" pickOnBounds="true" preserveRatio="true" styleClass="child">
+           <ImageView fx:id="goBackButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#mouseClicked" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" pickOnBounds="true" preserveRatio="true" styleClass="child">
                <Image url="@../../assets/buttons/goBackBtn.png" />
            </ImageView>
        </VBox>

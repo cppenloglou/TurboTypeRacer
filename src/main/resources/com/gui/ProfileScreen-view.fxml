@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="containerBackground" stylesheets="@../../styles/styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.ProfileScreenController">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="containerBackground" stylesheets="@../../styles/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.ProfileScreenController">
    <top>
       <ImageView fitHeight="200.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
          <BorderPane.margin>
@@ -25,22 +25,18 @@
             <Insets top="70.0" />
          </BorderPane.margin>
          <HBox alignment="CENTER" prefHeight="364.0" prefWidth="1880.0">
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="carVbox"
-                  stylesheets="@../../styles/styles.css">
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="carVbox" stylesheets="@../../styles/styles.css">
                <HBox.margin>
-                  <Insets left="-50.0" right="-250.0"/>
+                  <Insets left="-50.0" right="-250.0" />
                </HBox.margin>
-               <ImageView fx:id="upArrowBtn" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#changeCar"
-                          pickOnBounds="true" preserveRatio="true" visible="false">
-                  <Image url="@../../assets/buttons/upBtn.png"/>
+               <ImageView fx:id="upArrowBtn" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#changeCar" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <Image url="@../../assets/buttons/upBtn.png" />
                </ImageView>
-               <ImageView fx:id="garageVehicleSelectionImageView" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true"
-                          preserveRatio="true">
-                  <Image url="@../../assets/vehicles/car1.png"/>
+               <ImageView fx:id="garageVehicleSelectionImageView" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../../assets/vehicles/car1.png" />
                </ImageView>
-               <ImageView fx:id="downArrowBtn" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#changeCar"
-                          pickOnBounds="true" preserveRatio="true" visible="false">
-                  <Image url="@../../assets/buttons/downBtn.png"/>
+               <ImageView fx:id="downArrowBtn" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#changeCar" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <Image url="@../../assets/buttons/downBtn.png" />
                </ImageView>
             </VBox>
             <VBox prefHeight="266.0" prefWidth="351.0">
@@ -82,7 +78,7 @@
                      <Insets bottom="30.0" />
                   </VBox.margin>
                </TextField>
-               <ImageView fx:id="updateBtn" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#updateClicked" pickOnBounds="true" preserveRatio="true" styleClass="child">
+               <ImageView fx:id="updateBtn" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#updateClicked" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" pickOnBounds="true" preserveRatio="true" styleClass="child">
                   <VBox.margin>
                      <Insets bottom="35.0" />
                   </VBox.margin>
@@ -95,7 +91,7 @@
                </HBox.margin>
             </ListView>
          </HBox>
-         <ImageView fx:id="goBackButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#returnToMain" pickOnBounds="true" preserveRatio="true" styleClass="child">
+         <ImageView fx:id="goBackButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#returnToMain" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" pickOnBounds="true" preserveRatio="true" styleClass="child">
             <Image url="@../../assets/buttons/goBackBtn.png" />
          </ImageView>
       </VBox>

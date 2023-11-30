@@ -4,6 +4,8 @@
 }
 
 .containerBackground {
+  -fx-background-repeat: no-repeat;
+  -fx-background-size: 100% 100%;
   -fx-background-image: url("../assets/backgrounds/mainBackgroundTheme.jpg");
   -fx-alignment: center ;
   -fx-padding: 10 ;

@@ -1,10 +1,8 @@
 package com.gui;
 
-import com.game.Level;
-import com.game.LevelManager;
-import com.game.LoginManager;
-import com.game.Player;
+import com.game.*;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -31,11 +29,14 @@ public class SignUpScreenController {
 
     @FXML
     void returnToMain(MouseEvent event) throws IOException {
+        Music.playButtonSound();
         StartScreenController.sceneGenerator(stage, root, "StartScreen-view.fxml", event, "Start Screen");
+
     }
 
     @FXML
     void chooseImage(MouseEvent event) {
+        Music.playButtonSound();
         ImageView selectedImage = (ImageView) event.getSource();
         for(ImageView image : iconList){
             if(image!=selectedImage){
@@ -62,6 +63,15 @@ public class SignUpScreenController {
     }
 
     @FXML
+    void animationPop(MouseEvent event) {
+        ((Node)event.getSource()).setStyle("-fx-effect: dropShadow(gaussian, " + "#E34255" + ", 28, 0.7, 0, 0)");
+    }
+    @FXML
+    void animationPopUp(MouseEvent event) {
+        ((Node)event.getSource()).setStyle(null);
+    }
+
+    @FXML
     void initialize() {
         assert goBackButton != null : "fx:id=\"goBackButton\" was not injected: check your FXML file 'SignUpScreen-view.fxml'.";
         assert loginButton != null : "fx:id=\"loginButton\" was not injected: check your FXML file 'SignUpScreen-view.fxml'.";
@@ -81,6 +91,7 @@ public class SignUpScreenController {
 
     //Creates new player and loads the MainScreen.
     public void signUpClicked(MouseEvent event) throws IOException {
+        Music.playButtonSound();
         String name = userNameTextField.getText();
         String password = passwordField.getText();
         String phoneNumber = phoneNumberField.getText();

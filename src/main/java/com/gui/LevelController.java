@@ -1,7 +1,9 @@
 package com.gui;
 
 import com.game.*;
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -10,10 +12,13 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.scene.layout.VBox;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.util.Duration;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -22,7 +27,7 @@ public class LevelController {
     @FXML
     private ImageView result, playerCar, computerCar;
     @FXML
-    private AnchorPane anchorPane;
+    private BorderPane borderPane;
     @FXML
     private Label wordLabel;
     @FXML
@@ -34,14 +39,28 @@ public class LevelController {
     private ArrayList<String> words = new ArrayList<>();
     private int lives = 3;
 
+    private int wordAmount;
+
+    @FXML
+    void animationPop(MouseEvent event) {
+        ((Node)event.getSource()).setStyle("-fx-effect: dropShadow(gaussian, " + "#E34255" + ", 28, 0.7, 0, 0)");
+    }
+    @FXML
+    void animationPopUp(MouseEvent event) {
+        ((Node)event.getSource()).setStyle(null);
+    }
+
     @FXML
     void goBack(MouseEvent event) throws IOException {
+        Music.playButtonSound();
+        Music.changeSong(Music.getStartScreenSong());
         StartScreenController.sceneGenerator(stage,root,"LevelsScreen-view.fxml", event, "Levels Screen");
     }
 
     @FXML
     void initialize() {
-        assert anchorPane != null : "fx:id=\"anchorPane\" was not injected: check your FXML file 'Level-view.fxml'.";
+        Music.changeSong(Music.getGameScreenSong());
+        assert borderPane != null : "fx:id=\"anchorPane\" was not injected: check your FXML file 'Level-view.fxml'.";
         assert computerCar != null : "fx:id=\"computerCar\" was not injected: check your FXML file 'Level-view.fxml'.";
         assert endBox != null : "fx:id=\"endBox\" was not injected: check your FXML file 'Level-view.fxml'.";
         assert hBox != null : "fx:id=\"hBox\" was not injected: check your FXML file 'Level-view.fxml'.";
@@ -49,11 +68,13 @@ public class LevelController {
         assert result != null : "fx:id=\"result\" was not injected: check your FXML file 'Level-view.fxml'.";
         assert wordLabel != null : "fx:id=\"wordLabel\" was not injected: check your FXML file 'Level-view.fxml'.";
 
-        anchorPane.getStyleClass().add("firstMap");
+        borderPane.getStyleClass().add("firstMap");
 
         words.addAll(LevelManager.getCurrentLevel().getWordsList());
+        wordAmount = words.size();
         setCarImages();
         wordLabel.setText(words.get(0));
+
 
      }
 
@@ -64,6 +85,9 @@ public class LevelController {
         computerCar.setImage(new Image(Objects.requireNonNull(StartScreen.class.getResourceAsStream("/assets/vehicles/car"+(int)Math.ceil(levelNum/4.0)+".png"))));
     }
 
+    double X = 0;
+    double Y = 0;
+
     @FXML
     void checkText(KeyEvent event) {
         if((event.getCode() == KeyCode.SPACE || event.getCode() == KeyCode.ENTER) && !endBox.isVisible()){
@@ -71,6 +95,38 @@ public class LevelController {
             TextField field = (TextField) event.getSource();
             //Checks if the typed word was correct
             if(field.getText().trim().equals(wordLabel.getText())){
+                playerCar.setVisible( true );
+
+                TranslateTransition translate = new TranslateTransition();
+
+                if (X == 0) {
+                    translate.setToX(X - (360.0 / (wordAmount * (wordAmount / 3.0))));
+                    X = -(360.0 / (wordAmount * (wordAmount / 3.0)));
+                }
+                else {
+                    translate.setToX(X + X);
+                    X = X + X;
+                }
+
+                if (Y == 0) {
+                    translate.setToY(Y - 270.0 / (wordAmount * (wordAmount / 3.0)));
+                    Y = -270.0 / (wordAmount * (wordAmount / 3.0));
+                }
+                else
+                {
+                    translate.setToY(Y + (Y + 60.0 / (wordAmount * (wordAmount / 3.0))));
+                    Y = Y + Y + 60.0 / (wordAmount * (wordAmount / 3.0));
+                }
+
+                System.out.println(" " + playerCar.getX() + playerCar.getY() + playerCar.getLayoutX() + playerCar.getLayoutY());
+
+                translate.setDuration(Duration.millis(1000));
+                translate.setAutoReverse(true);
+                translate.setNode(playerCar);
+                translate.play();
+
+
+
                 words.remove(0);
                 //Checks if there are no words left.
                 if(words.isEmpty()){
