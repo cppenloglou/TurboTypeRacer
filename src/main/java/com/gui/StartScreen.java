@@ -32,7 +32,6 @@ public class StartScreen extends Application {
             stage.setFullScreen(true);
         } else{
             stage.setFullScreen(false);
-            stage.setResizable(true);
             stage.setMaximized(true);
         }
 

@@ -2,6 +2,7 @@ package com.gui;
 
 import com.game.LevelManager;
 import com.game.LoginManager;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -48,18 +49,15 @@ public class StartScreenController {
         }
     }
 
-    public static void sceneGenerator(Stage stage, Parent root, String name, MouseEvent event, String Player_Screen) throws IOException {
+    public static void sceneGenerator(Stage stage, Parent root, String name, Event event, String Player_Screen) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(StartScreenController.class.getResource(name)));
 
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.getScene().setRoot(root);
-        if(SettingsScreenController.getGameSettings().isFullScreen()) {
-            stage.setFullScreen(true);
-        } else{
-            stage.setFullScreen(false);
-            stage.setResizable(true);
-            stage.setMaximized(true);
-        }
+
+        stage.setFullScreen(SettingsScreenController.getGameSettings().isFullScreen());
+        if(Player_Screen.equals("Level Screen")) stage.setFullScreen(true);
+
         stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
         stage.setTitle(Player_Screen);
         stage.show();

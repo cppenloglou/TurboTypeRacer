@@ -4,21 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4349fe6-15ab-47f3-8c96-c940a2b89be7" name="Changes" comment="Added comments to the code">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2023_8_01_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2023_8_01_PM__Changes_.xml" afterDir="false" />
+    <list default="true" id="e4349fe6-15ab-47f3-8c96-c940a2b89be7" name="Changes" comment="Added car pngs, made code store the selected car on the player, changed the way the wordlist in each level is created">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gui/LevelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/backgrounds/map1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/goBack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/scene Elements/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/scene Elements/youLoseTitle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/scene Elements/youWinTitle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gui/Level-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/7.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/game/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/Level.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LevelsScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LevelsScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/ProfileScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/ProfileScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/ProfileScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/ProfileScreen-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/StartScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/StartScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/StartScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/StartScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/LevelsScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LevelsScreen-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/levelDb/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/levelDb/1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/levelDb/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/levelDb/2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/levelDb/3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/levelDb/3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/levelDb/4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/levelDb/4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/levelDb/5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/levelDb/5.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700955851776</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added car pngs, made code store the selected car on the player, changed the way the wordlist in each level is created">
+      <option name="closed" value="true" />
+      <created>1701127082267</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701127082268</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,6 +236,7 @@
     <MESSAGE value="Made Login manager use static methods, fixed path bug, added a LeaderBoard, levels, and a level selection screen." />
     <MESSAGE value="Made the login manager use static methods, fixed path bug when reading playerdb, added a leaderBoard, levels, and a level selection screen." />
     <MESSAGE value="Added comments to the code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added comments to the code" />
+    <MESSAGE value="Added car pngs, made code store the selected car on the player, changed the way the wordlist in each level is created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added car pngs, made code store the selected car on the player, changed the way the wordlist in each level is created" />
   </component>
 </project>

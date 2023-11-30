@@ -16,6 +16,7 @@ public class Level implements Serializable {
     public Level(int levelNum, String levelPath){
         this.levelNum = levelNum;
         this.levelPath = levelPath;
+        readFile();
     }
 
     //Method that reads every single line of a txt file and adds it into the wordList array.
@@ -30,10 +31,14 @@ public class Level implements Serializable {
                 }
                 reader.close();
             } catch (IOException e) {
-                System.err.println("Error reading file: " + levelPath + ".txt");
+                System.err.println("Error reading file: " + levelPath);
                 e.printStackTrace();
             }
         }
+    }
+
+    public ArrayList<String> getWordsList(){
+        return this.wordsList;
     }
 
     public int getLevelNum(){

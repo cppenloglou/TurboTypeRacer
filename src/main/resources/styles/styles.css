@@ -195,7 +195,7 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: 100% 100%;
     -fx-padding: 0 0 0 70;
-     -fx-font-size: 35px;
+    -fx-font-size: 35px;
 }
 
 .checkBox .box {
@@ -227,3 +227,18 @@
     -fx-background-size: 100% 100%;
 }
 
+.firstMap {
+    -fx-background-color: transparent;
+    -fx-background-image: url("../assets/backgrounds/map1.gif");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+}
+
+.typeField {
+    -fx-background-color: transparent;
+    -fx-background-image: url("../assets/backgrounds/listBackground.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+    -fx-text-fill: black;
+    -fx-text-alignment: center;
+}

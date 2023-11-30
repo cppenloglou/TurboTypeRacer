@@ -71,6 +71,11 @@ public class LevelsScreenController {
             int level = Integer.parseInt(levelLabel.getText().split(" ")[1].trim());
 
             LevelManager.setCurrentLevel(LevelManager.getLevel(level));
+            try {
+                StartScreenController.sceneGenerator(stage, root, "Level-view.fxml", event, "Level Screen");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         };
     }
 

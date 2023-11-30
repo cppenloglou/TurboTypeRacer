@@ -30,8 +30,7 @@ public class ProfileScreenController {
 
     private Stage stage;
     private Parent root;
-
-    int numberOfCar = 1;
+    private static int numberOfCar = 1;
 
     @FXML
     void returnToMain(MouseEvent event) throws IOException {
@@ -70,9 +69,7 @@ public class ProfileScreenController {
         currentPlayer.setSelectedCar(garage.get(numberOfCar-1)); //Stores the selected car on the player
 
         //Handles the visibility of the arrow buttons
-        if (numberOfCar == 1) {downArrowBtn.setVisible(true); upArrowBtn.setVisible(false);}
-        else if (numberOfCar > 1 && numberOfCar < currentPlayerAvailableCarsAmount) {downArrowBtn.setVisible(true); upArrowBtn.setVisible(true);}
-        else if (numberOfCar == currentPlayerAvailableCarsAmount) {downArrowBtn.setVisible(false); upArrowBtn.setVisible(true);}
+        initializeArrows(currentPlayerAvailableCarsAmount);
     }
 
     @FXML
@@ -88,14 +85,19 @@ public class ProfileScreenController {
         assert updateBtn != null : "fx:id=\"updateBtn\" was not injected: check your FXML file 'ProfileScreen-view.fxml'.";
         assert userNameTextField != null : "fx:id=\"userNameTextField\" was not injected: check your FXML file 'ProfileScreen-view.fxml'.";
 
-        int currentPlayerAvailableCars = LoginManager.getCurrentPlayer().getGarage().size();
-        if(currentPlayerAvailableCars > 1) downArrowBtn.setVisible(true);
-
         initializeFields();
         initializeStatsList();
     }
 
+    public void initializeArrows(int currentPlayerAvailableCars){
+        if(currentPlayerAvailableCars==1) {downArrowBtn.setVisible(false); upArrowBtn.setVisible(false);}
+        else if (numberOfCar == 1) {downArrowBtn.setVisible(true); upArrowBtn.setVisible(false);}
+        else if (numberOfCar > 1 && numberOfCar < currentPlayerAvailableCars) {downArrowBtn.setVisible(true); upArrowBtn.setVisible(true);}
+        else if (numberOfCar == currentPlayerAvailableCars) {downArrowBtn.setVisible(false); upArrowBtn.setVisible(true);}
+    }
     public void initializeFields(){
+        initializeArrows(LoginManager.getCurrentPlayer().getGarage().size());
+        garageVehicleSelectionImageView.setImage(new Image(Objects.requireNonNull(StartScreen.class.getResourceAsStream(LoginManager.getCurrentPlayer().getSelectedCar().getImageUrl()))));
         userNameTextField.setText(LoginManager.getCurrentPlayer().getName());
         passwordField.setText(LoginManager.getCurrentPlayer().getPassword());
         phoneNumberField.setText(LoginManager.getCurrentPlayer().getPhoneNumber());
