@@ -4,30 +4,84 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4349fe6-15ab-47f3-8c96-c940a2b89be7" name="Changes" comment="Added comments to the code">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/Music.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sounds/buttonSound.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sounds/gameScreenSong.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sounds/poppingSound.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sounds/startScreenSong.mp3" afterDir="false" />
+    <list default="true" id="e4349fe6-15ab-47f3-8c96-c940a2b89be7" name="Changes" comment="Added words to type for 25 levels, finished car movement, added tutorial screen, fixed screens not displaying on center certain panes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gui/TutorialScreenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/leftBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/rightBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/tutorialBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/sceneElements/label.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/tutorial/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/tutorial/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/tutorial/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/tutorial/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/tutorial/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/tutorial/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/tutorial/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/tutorial/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/tutorial/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LevelScreen-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LevelSelectionScreen-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gui/TutorialScreen-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/10.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/11.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/12.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/13.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/14.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/15.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/16.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/17.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/18.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/20.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/21.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/22.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/23.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/24.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/25.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/levelDb/9.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2023_8_01_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2023_8_01_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/EditProfileScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/EditProfileScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/LoginManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/LoginManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LeaderBoardScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LeaderBoardScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LevelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LevelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LevelsScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LevelsScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LoginScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LoginScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LevelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LevelScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LevelsScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LevelSelectionScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/MainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/MainScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/ProfileScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/ProfileScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/SettingsScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/SettingsScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/SignUpScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/SignUpScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/StartScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/StartScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/StartScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/StartScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/buttons/chooseImageBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/chooseImageBtn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/buttons/editProfileBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/editProfileBtn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/buttons/exportBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/exportBtn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/buttons/goBackBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/goBackBtn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/buttons/leaderBoardBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/leaderBoardBtn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/buttons/levelsBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/levelsBtn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/buttons/loginBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/loginBtn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/buttons/profileBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/profileBtn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/buttons/quitBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/quitBtn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/buttons/settingsBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/settingsBtn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/buttons/signUpBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/signUpBtn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/buttons/statsBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/statsBtn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/buttons/updateBtn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/buttons/updateBtn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/scene Elements/heart.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/sceneElements/heart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/scene Elements/label.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/scene Elements/levelIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/sceneElements/levelIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/scene Elements/youLoseTitle.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/sceneElements/youLoseTitle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/scene Elements/youWinTitle.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/sceneElements/youWinTitle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vehicles/car5.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/EditProfileScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/EditProfileScreen-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/LeaderBoardScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LeaderBoardScreen-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/Level-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/Level-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/LevelsScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LevelsScreen-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/Level-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/LevelsScreen-view.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/LoginScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LoginScreen-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/MainScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/MainScreen-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/ProfileScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/ProfileScreen-view.fxml" afterDir="false" />
@@ -35,6 +89,12 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/SignUpScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/SignUpScreen-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/StartScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/StartScreen-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/levelDb/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/levelDb/1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/levelDb/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/levelDb/2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/levelDb/3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/levelDb/3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/levelDb/4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/levelDb/4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/levelDb/5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/levelDb/5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/levelDb/6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/levelDb/6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/levelDb/7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/levelDb/7.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,11 +167,11 @@
       <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\com\gui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\assets\sceneElements" />
+      <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\assets\backgrounds" />
       <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources" />
       <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\game" />
       <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\assets\vehicles" />
-      <recent name="C:\Users\xriso\IdeaProjects\TurboTypeRacer\src\main\resources\assets\vehicles" />
-      <recent name="G:\giorgos_spinkl\IdeaProjects\TurboTypeRacer\src\main\resources\assets\Small Scene Elements" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.gui" />
@@ -237,6 +297,7 @@
     <MESSAGE value="Made Login manager use static methods, fixed path bug, added a LeaderBoard, levels, and a level selection screen." />
     <MESSAGE value="Made the login manager use static methods, fixed path bug when reading playerdb, added a leaderBoard, levels, and a level selection screen." />
     <MESSAGE value="Added comments to the code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added comments to the code" />
+    <MESSAGE value="Added words to type for 25 levels, finished car movement, added tutorial screen, fixed screens not displaying on center certain panes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added words to type for 25 levels, finished car movement, added tutorial screen, fixed screens not displaying on center certain panes" />
   </component>
 </project>

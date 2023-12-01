@@ -13,6 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
@@ -126,7 +127,17 @@ public class LeaderBoardScreenController {
     //Used to export all the player scores in the playerScores.txt file
     public void exportScores(MouseEvent mouseEvent){
         Music.playButtonSound();
-        LoginManager.exportPlayerScores("playerScores.txt");
+
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+        directoryChooser.setTitle("Select a Folder");
+
+        // Show the file chooser dialog
+        java.io.File selectedDirectory = directoryChooser.showDialog(stage);
+
+        // Handle the selected directory
+        if (selectedDirectory != null) {
+            LoginManager.exportPlayerScores(selectedDirectory.getAbsolutePath().replace("\\", "/"), "playerScores.txt");
+        }
     }
 
 }

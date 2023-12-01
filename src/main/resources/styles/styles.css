@@ -1,18 +1,7 @@
-.container {
-  -fx-alignment: center ;
-  -fx-padding: 10 ;
-}
-
 .containerBackground {
   -fx-background-repeat: no-repeat;
   -fx-background-size: 100% 100%;
   -fx-background-image: url("../assets/backgrounds/mainBackgroundTheme.jpg");
-  -fx-alignment: center ;
-  -fx-padding: 10 ;
-}
-.child {
-    -fx-alignment: center ;
-    -fx-padding: 10 ;
 }
 
 .textField {
@@ -20,7 +9,7 @@
     -fx-background-color: transparent;
     -fx-background-position: center;
     -fx-background-image: url("../assets/buttons/backgroundBtn.png");
-    -fx-alignment: center ;
+    -fx-alignment: center;
     -fx-text-fill: black;
 }
 
@@ -92,7 +81,7 @@
     -fx-scale-x: 0;
 }
 
-.tab-pane {
+.tabPane {
     -fx-border-color: black;
     -fx-border-width: 2;
     -fx-background-color: transparent;
@@ -101,12 +90,12 @@
     -fx-background-size: 100% 100%;
 }
 
-.tab-pane .tab
+.tabPane .tab
 {
     -fx-background-color: #981b2b;
 }
 
-.tab-pane .tab-header-background{
+.tabPane .tab-header-background{
     -fx-background-color: transparent;
 }
 
@@ -244,3 +233,4 @@
     -fx-text-fill: black;
     -fx-text-alignment: center;
 }
+

@@ -23,7 +23,7 @@ public class Player implements Serializable {
         this.phoneNumber = phoneNumber;
         this.profileImage = profileImage;
         InitializeScoreMap(levels);
-        this.selectedCar = new Vehicle("Car1", "/assets/vehicles/car1.png");
+        this.selectedCar = new Vehicle("Car1", "/assets/vehicles/car1.gif");
         garageVehicles.add(this.selectedCar);
         this.gameSettings = new GameSettings(SettingsScreenController.getGameSettings());
     }

@@ -6,6 +6,7 @@ import com.game.Music;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCombination;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -29,6 +30,7 @@ public class StartScreen extends Application {
         Scene scene = new Scene(root);
         stage.setTitle("Start Screen");
         stage.setScene(scene);
+        stage.getIcons().add(new Image(Objects.requireNonNull(StartScreen.class.getResourceAsStream("/assets/profile/profileIconRed.png"))));
 
         if (gameSettings != null && gameSettings.isFullScreen()) {
             stage.setFullScreen(true);

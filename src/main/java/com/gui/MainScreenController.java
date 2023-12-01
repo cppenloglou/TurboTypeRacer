@@ -34,7 +34,7 @@ public class MainScreenController {
         if (event.getSource() == leaderboardBtn)
             sceneGenerator(stage, root, "LeaderBoardScreen-view.fxml", event, "Login Screen");
         else if (event.getSource() == levelsBtn)
-            sceneGenerator(stage, root,"LevelsScreen-view.fxml", event, "SignUp Screen");
+            sceneGenerator(stage, root,"LevelSelectionScreen-view.fxml", event, "SignUp Screen");
         else if (event.getSource() == profileBtn)
             sceneGenerator(stage,root,"ProfileScreen-view.fxml", event, "LeaderBoard Screen");
         else if (event.getSource() == settingsBtn){

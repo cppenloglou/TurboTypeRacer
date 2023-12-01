@@ -6,37 +6,40 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="containerBackground" stylesheets="@../../styles/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.LeaderBoardScreenController">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1080.0" prefWidth="1920.0" styleClass="containerBackground" stylesheets="@../../styles/styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.LeaderBoardScreenController">
     <top>
-        <ImageView fitHeight="200.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-            <Image url="@../../assets/scene Elements/label.png" />
+        <ImageView pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+            <Image url="@../../assets/sceneElements/label.png" />
             <BorderPane.margin>
                 <Insets top="100.0" />
             </BorderPane.margin>
         </ImageView>
     </top>
-    <right>
-        <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="674.0" prefWidth="1922.0" styleClass="container" stylesheets="@../../styles/styles.css" BorderPane.alignment="CENTER">
+   <center>
+        <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" BorderPane.alignment="CENTER">
             <BorderPane.margin>
                 <Insets />
             </BorderPane.margin>
-            <TabPane fx:id="tabPane" prefHeight="591.0" prefWidth="1880.0" tabClosingPolicy="UNAVAILABLE">
+            <FlowPane alignment="CENTER" VBox.vgrow="ALWAYS">
                 <VBox.margin>
-                    <Insets left="500.0" right="500.0" />
+                    <Insets />
                 </VBox.margin>
-                <Tab text="Level 1" />
-            </TabPane>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                <ImageView fitHeight="300.0" fitWidth="400.0" onMouseClicked="#exportScores" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" pickOnBounds="true" preserveRatio="true" styleClass="child">
+                <TabPane fx:id="tabPane" prefHeight="591.0" prefWidth="1222.0" styleClass="tabPane" stylesheets="@../../styles/styles.css" tabClosingPolicy="UNAVAILABLE">
+                    <Tab text="Level 1" />
+                </TabPane>
+            </FlowPane>
+            <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                <ImageView fitWidth="418.0" onMouseClicked="#exportScores" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" pickOnBounds="true" preserveRatio="true">
                     <Image url="@../../assets/buttons/exportBtn.png" />
                 </ImageView>
-                <ImageView fx:id="goBackButton" fitHeight="300.0" fitWidth="400.0" onMouseClicked="#returnToMain" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" pickOnBounds="true" preserveRatio="true" styleClass="child">
+                <ImageView fx:id="goBackButton" onMouseClicked="#returnToMain" onMouseEntered="#animationPop" onMouseExited="#animationPopUp" pickOnBounds="true" preserveRatio="true">
                     <Image url="@../../assets/buttons/goBackBtn.png" />
                 </ImageView>
             </HBox>
         </VBox>
-    </right>
+   </center>
 </BorderPane>

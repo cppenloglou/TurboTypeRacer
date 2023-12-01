@@ -1,6 +1,5 @@
 package com.gui;
 
-import com.game.GameSettings;
 import com.game.LevelManager;
 import com.game.LoginManager;
 import com.game.Music;

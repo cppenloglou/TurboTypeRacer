@@ -45,9 +45,9 @@ public class LoginManager {
         }
     }
 
-    public static void exportPlayerScores(String fileName){
+    public static void exportPlayerScores(String folderPath, String fileName){
         if(!playerDatabase.isEmpty()){
-            String path = Objects.requireNonNull(StartScreen.class.getResource("/playerScores/")).getPath()+fileName;
+            String path = folderPath+"/"+fileName;
             try {
                 BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(path));
 
