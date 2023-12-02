@@ -4,6 +4,7 @@ import com.game.*;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -23,9 +24,15 @@ public class SignUpScreenController {
     @FXML
     private ImageView greenIcon, redIcon, blueIcon, purpleIcon;
     private final ArrayList<ImageView> iconList = new ArrayList<>();
+    @FXML
+    private Label promtLabel;
     private String profileImage;
     private Stage stage;
     private Parent root;
+
+    public void textFieldClicked() {
+        promtLabel.setText("");
+    }
 
     @FXML
     void returnToMain(MouseEvent event) throws IOException {
@@ -96,7 +103,7 @@ public class SignUpScreenController {
         String password = passwordField.getText();
         String phoneNumber = phoneNumberField.getText();
 
-        if(name!=null && password!=null && phoneNumber!=null && profileImage!=null){ //Checks if all the fields are filled
+        if(profileImage!=null && !name.isEmpty() && !password.isEmpty() && !phoneNumber.isEmpty()){ //Checks if all the fields are filled
             if(!LoginManager.playerExists(name)){
 
                 ArrayList<Level> levelsList = new ArrayList<>();
@@ -110,7 +117,14 @@ public class SignUpScreenController {
 
                 SettingsScreenController.setGameSettings(LoginManager.getCurrentPlayer().getGameSettings());
                 StartScreenController.sceneGenerator(stage, root,"MainScreen-view.fxml", event, "Main Screen" );
-            }
+            } else
+                promtLabel.setText("User already exists!!");
         }
+        else if (name.isEmpty() || password.isEmpty() || phoneNumber.isEmpty())
+            promtLabel.setText("Please fill all the fields");
+        else
+            promtLabel.setText("Choose a profile icon");
+
     }
+
 }

@@ -54,6 +54,7 @@ public class LevelScreenController {
     void goBack(MouseEvent event) throws IOException {
         Music.playButtonSound();
         Music.changeSong(Music.getStartScreenSong());
+        LoginManager.savePlayerDatabase("players.txt");
         StartScreenController.sceneGenerator(stage,root,"LevelSelectionScreen-view.fxml", event, "Levels Screen");
     }
 
@@ -83,7 +84,11 @@ public class LevelScreenController {
         playerCar.setImage(new Image(Objects.requireNonNull(StartScreen.class.getResourceAsStream(LoginManager.getCurrentPlayer().getSelectedCar().getImageUrl()))));
 
         int levelNum = LevelManager.getCurrentLevel().getLevelNum();
-        computerCar.setImage(new Image(Objects.requireNonNull(StartScreen.class.getResourceAsStream("/assets/vehicles/car"+(int)Math.ceil(levelNum/4.0)+".gif"))));
+        int carNum = (int)Math.ceil(levelNum/4.0);
+
+        if (carNum > 5)
+            carNum = 5;
+        computerCar.setImage(new Image(Objects.requireNonNull(StartScreen.class.getResourceAsStream("/assets/vehicles/car"+carNum+".gif"))));
     }
 
 
@@ -95,6 +100,7 @@ public class LevelScreenController {
             TextField field = (TextField) event.getSource();
             //Checks if the typed word was correct
             if(field.getText().trim().equals(wordLabel.getText())){
+                Music.playPopSound();
                 carAnimation(playerCar,1200, 670, xPlayerCoordinate, yPlayerCoordinate, "player");
                 words.remove(0);
                 //Checks if there are no words left.
@@ -115,11 +121,12 @@ public class LevelScreenController {
                 }
 
                 //Removes a heart icon
-                lives--;
-                vBox.getChildren().get(lives).setVisible(false);
+                //lives--;
+                //vBox.getChildren().get(lives).setVisible(false);
 
                 //If there are no hearts left makes visible the Losing pane.
                 if(lives==0){
+                    Music.playLoseSound();
                     field.setEditable(false);
                     endBox.setVisible(true);
                     result.setImage(new Image(Objects.requireNonNull(StartScreen.class.getResourceAsStream("/assets/sceneElements/youLoseTitle.png"))));
@@ -129,6 +136,7 @@ public class LevelScreenController {
     }
 
     public void playerWon(TextField field){
+        Music.playWinSound();
         Player currentPlayer = LoginManager.getCurrentPlayer();
         Level currentLevel = LevelManager.getCurrentLevel();
 
@@ -141,7 +149,7 @@ public class LevelScreenController {
         if(nextLevel!=null && !currentPlayer.getScoreMap().containsKey(nextLevel)){
             currentPlayer.setLevelAndScore(nextLevel, 0);
             int newCar = (int)Math.ceil((nextLevel.getLevelNum())/5.0);
-            if(currentLevel.getLevelNum()%5==0)
+            if(currentLevel.getLevelNum()%5==0 && newCar <= 5)
                 currentPlayer.getGarage().add(new Vehicle("Car"+newCar, "/assets/vehicles/car"+newCar+".gif"));
         }
         //Makes visible the Victory pane.

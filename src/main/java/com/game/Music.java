@@ -11,6 +11,10 @@ public class Music {
     private static String buttonSong =  "/sounds/buttonSound.mp3";
     private static String popSong =  "/sounds/poppingSound.mp3";
 
+    private static String winSong =  "/sounds/winSound.mp3";
+
+    private static String loseSong =  "/sounds/loseSound.mp3";
+
 
     public Music() {
         changeSong(startScreenSong);
@@ -42,6 +46,20 @@ public class Music {
     public static void playPopSound () {
         if(SettingsScreenController.getGameSettings().isSoundEfectsSound()) {
             Media song = new Media(StartScreen.class.getResource(popSong).toExternalForm());
+            new MediaPlayer(song).play();
+        }
+    }
+
+    public static void playWinSound () {
+        if(SettingsScreenController.getGameSettings().isSoundEfectsSound()) {
+            Media song = new Media(StartScreen.class.getResource(winSong).toExternalForm());
+            new MediaPlayer(song).play();
+        }
+    }
+
+    public static void playLoseSound () {
+        if(SettingsScreenController.getGameSettings().isSoundEfectsSound()) {
+            Media song = new Media(StartScreen.class.getResource(loseSong).toExternalForm());
             new MediaPlayer(song).play();
         }
     }

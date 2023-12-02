@@ -50,7 +50,6 @@ public class LeaderBoardScreenController {
     void initialize() {
         assert tabPane != null : "fx:id=\"TabPane\" was not injected: check your FXML file 'LeaderBoardScreen-view.fxml'.";
         assert goBackButton != null : "fx:id=\"goBackButton\" was not injected: check your FXML file 'EditProfileScreen-view.fxml'.";
-
         initializeTabPane();
     }
 
@@ -71,7 +70,7 @@ public class LeaderBoardScreenController {
                 tableView.sort();
 
                 tab.setContent(tableView);
-                tabPane.getTabs().add(tab);
+                tabPane.getTabs().add(level.getLevelNum() - 1 ,tab);
             }
         }
         tabPane.getTabs().remove(0); //Used to remove a placeholder tab.

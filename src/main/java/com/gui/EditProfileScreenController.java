@@ -101,7 +101,7 @@ public class EditProfileScreenController {
         String password = passwordField.getText();
         String phoneNumber = phoneNumberField.getText();
 
-        if(name!=null && password!=null && phoneNumber!=null && profileImage!=null){ //Checks if every field is filled.
+        if(profileImage!=null && !name.isEmpty() && !password.isEmpty() && !phoneNumber.isEmpty()){ //Checks if every field is filled.
             if(!LoginManager.playerExists(name) || name.equals(LoginManager.getCurrentPlayer().getName())){
                 Player updatedPlayer = LoginManager.getCurrentPlayer();
 
