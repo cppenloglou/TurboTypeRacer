@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="TurboTypeRacer:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4349fe6-15ab-47f3-8c96-c940a2b89be7" name="Changes" comment="Added words to type for 25 levels, finished car movement, added tutorial screen, fixed screens not displaying on center certain panes">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sounds/loseSound.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sounds/winSound.mp3" afterDir="false" />
+    <list default="true" id="e4349fe6-15ab-47f3-8c96-c940a2b89be7" name="Changes" comment="Levels are now ordered on the leaderboard and the level selection screen. Made jar file">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/TurboTypeRacer_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TurboTypeRacer.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gui/Launcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2023_8_01_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2023_8_01_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/Music.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/EditProfileScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/EditProfileScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/Level.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/LevelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/LevelManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LeaderBoardScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LeaderBoardScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LevelScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LevelScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LevelSelectionScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LevelSelectionScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/LoginScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/LoginScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/SignUpScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/SignUpScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/tutorial/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/tutorial/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/LoginScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/LoginScreen-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gui/SignUpScreen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gui/SignUpScreen-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/levelDb/19.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/levelDb/19.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/levelDb/6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/levelDb/6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sounds/buttonSound.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sounds/buttonSound.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sounds/gameScreenSong.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sounds/gameScreenSong.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sounds/poppingSound.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sounds/poppingSound.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sounds/startScreenSong.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sounds/startScreenSong.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gui/SettingsScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gui/SettingsScreenController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,20 +70,20 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/xriso/IdeaProjects/TurboTypeRacer/target/classes&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/giorgos_spinkl/Downloads/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/bin/vcruntime140_1.dll",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.game" />
@@ -192,7 +189,31 @@
       <option name="project" value="LOCAL" />
       <updated>1700955851776</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Levels are now ordered on the leaderboard and the level selection screen. Made jar file">
+      <option name="closed" value="true" />
+      <created>1701538024559</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701538024559</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Levels are now ordered on the leaderboard and the level selection screen. Made jar file">
+      <option name="closed" value="true" />
+      <created>1701538167962</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701538167962</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Levels are now ordered on the leaderboard and the level selection screen. Made jar file">
+      <option name="closed" value="true" />
+      <created>1701538348276</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701538348276</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +250,7 @@
     <MESSAGE value="Made the login manager use static methods, fixed path bug when reading playerdb, added a leaderBoard, levels, and a level selection screen." />
     <MESSAGE value="Added comments to the code" />
     <MESSAGE value="Added words to type for 25 levels, finished car movement, added tutorial screen, fixed screens not displaying on center certain panes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added words to type for 25 levels, finished car movement, added tutorial screen, fixed screens not displaying on center certain panes" />
+    <MESSAGE value="Levels are now ordered on the leaderboard and the level selection screen. Made jar file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Levels are now ordered on the leaderboard and the level selection screen. Made jar file" />
   </component>
 </project>

@@ -121,8 +121,8 @@ public class LevelScreenController {
                 }
 
                 //Removes a heart icon
-                //lives--;
-                //vBox.getChildren().get(lives).setVisible(false);
+                lives--;
+                vBox.getChildren().get(lives).setVisible(false);
 
                 //If there are no hearts left makes visible the Losing pane.
                 if(lives==0){

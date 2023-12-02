@@ -4,6 +4,7 @@ import com.gui.StartScreen;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Objects;
 
 public class LevelManager {
@@ -26,6 +27,7 @@ public class LevelManager {
                             levelDatabase.add(new Level(Integer.parseInt(level), file.getAbsolutePath()));
                         }
                     }
+                    Collections.sort(levelDatabase);
                 }
             } else {
                 System.err.println("Specified path is not a directory.");

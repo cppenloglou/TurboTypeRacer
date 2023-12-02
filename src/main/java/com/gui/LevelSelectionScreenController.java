@@ -17,7 +17,6 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Comparator;
 import java.util.Objects;
 
 public class LevelSelectionScreenController {
@@ -50,18 +49,6 @@ public class LevelSelectionScreenController {
         initializeLevels();
     }
 
-    public class ancorPaneComparator implements Comparator<AnchorPane> {
-
-        @Override
-        public int compare(AnchorPane o1, AnchorPane o2) {
-            int a = Integer.parseInt(((Label)o1.getChildren().get(1)).getText().substring(6));
-            System.out.println(a);
-            int b = Integer.parseInt(((Label)o2.getChildren().get(1)).getText().substring(6));
-            System.out.println(b);
-            return (a > b)? 1 : 0;
-        }
-    }
-
     //Fills tilePane with all the player's unlocked levels represented by an image and a label.
     public void initializeLevels(){
         for(Level level : LevelManager.getLevelDatabase()){
@@ -82,9 +69,7 @@ public class LevelSelectionScreenController {
                 pane.getChildren().addAll(levelIcon, levelLabel);
 
                 pane.setOnMouseClicked(getLevelListener()); //Click listener that sets the current level using the info from the pane that is clicked.
-                Comparator test = new ancorPaneComparator();
                 tilePane.getChildren().add(pane);
-                tilePane.getChildren().sort(test);
             }
         }
     }

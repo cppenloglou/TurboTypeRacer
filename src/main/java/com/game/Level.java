@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Level implements Serializable {
+public class Level implements Serializable, Comparable<Level> {
     private final int levelNum;
     private final String levelPath; //Path of a txt file containing words that the user will need to type.
     private final ArrayList<String> wordsList = new ArrayList<>(); //ArrayList that holds all the words from the mentioned above.
@@ -57,5 +57,10 @@ public class Level implements Serializable {
 
     public int hashCode() {
         return Objects.hash(levelNum);
+    }
+
+    @Override
+    public int compareTo(Level o) {
+        return Integer.compare(this.levelNum, o.getLevelNum());
     }
 }

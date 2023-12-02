@@ -70,7 +70,7 @@ public class LeaderBoardScreenController {
                 tableView.sort();
 
                 tab.setContent(tableView);
-                tabPane.getTabs().add(level.getLevelNum() - 1 ,tab);
+                tabPane.getTabs().add(tab);
             }
         }
         tabPane.getTabs().remove(0); //Used to remove a placeholder tab.
@@ -124,7 +124,7 @@ public class LeaderBoardScreenController {
     }
 
     //Used to export all the player scores in the playerScores.txt file
-    public void exportScores(MouseEvent mouseEvent){
+    public void exportScores(){
         Music.playButtonSound();
 
         DirectoryChooser directoryChooser = new DirectoryChooser();

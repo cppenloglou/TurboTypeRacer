@@ -103,7 +103,7 @@ public class SettingsScreenController {
                 e.printStackTrace();
             }
         } else {
-            gameSettings = new GameSettings(false, true, true);
+            gameSettings = new GameSettings(true, true, true);
             return gameSettings;
         }
         return null;
